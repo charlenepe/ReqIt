@@ -1,0 +1,310 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
+		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
+		C59E848E1C87883D000B3C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E848C1C87883D000B3C90 /* Main.storyboard */; };
+		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
+		C59E84931C87883D000B3C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59E84921C87883D000B3C90 /* Assets.xcassets */; };
+		C59E84961C87883D000B3C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59E848D1C87883D000B3C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C59E84901C87883D000B3C90 /* ReqItApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReqItApp.xcdatamodel; sourceTree = "<group>"; };
+		C59E84921C87883D000B3C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C59E84951C87883D000B3C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C59E84971C87883D000B3C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C59E84821C87883D000B3C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C59E847C1C87883D000B3C90 = {
+			isa = PBXGroup;
+			children = (
+				C59E84871C87883D000B3C90 /* ReqItApp */,
+				C59E84861C87883D000B3C90 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C59E84861C87883D000B3C90 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C59E84851C87883D000B3C90 /* ReqItApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C59E84871C87883D000B3C90 /* ReqItApp */ = {
+			isa = PBXGroup;
+			children = (
+				C59E84881C87883D000B3C90 /* AppDelegate.swift */,
+				C59E848A1C87883D000B3C90 /* ViewController.swift */,
+				C59E848C1C87883D000B3C90 /* Main.storyboard */,
+				C59E84921C87883D000B3C90 /* Assets.xcassets */,
+				C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */,
+				C59E84971C87883D000B3C90 /* Info.plist */,
+				C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */,
+			);
+			path = ReqItApp;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C59E84841C87883D000B3C90 /* ReqItApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C59E849A1C87883D000B3C90 /* Build configuration list for PBXNativeTarget "ReqItApp" */;
+			buildPhases = (
+				C59E84811C87883D000B3C90 /* Sources */,
+				C59E84821C87883D000B3C90 /* Frameworks */,
+				C59E84831C87883D000B3C90 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReqItApp;
+			productName = ReqItApp;
+			productReference = C59E84851C87883D000B3C90 /* ReqItApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C59E847D1C87883D000B3C90 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Charlene Pe";
+				TargetAttributes = {
+					C59E84841C87883D000B3C90 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = C59E84801C87883D000B3C90 /* Build configuration list for PBXProject "ReqItApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C59E847C1C87883D000B3C90;
+			productRefGroup = C59E84861C87883D000B3C90 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C59E84841C87883D000B3C90 /* ReqItApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C59E84831C87883D000B3C90 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59E84961C87883D000B3C90 /* LaunchScreen.storyboard in Resources */,
+				C59E84931C87883D000B3C90 /* Assets.xcassets in Resources */,
+				C59E848E1C87883D000B3C90 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C59E84811C87883D000B3C90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */,
+				C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */,
+				C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C59E848C1C87883D000B3C90 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59E848D1C87883D000B3C90 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C59E84951C87883D000B3C90 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C59E84981C87883D000B3C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C59E84991C87883D000B3C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C59E849B1C87883D000B3C90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReqItApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.ateneo.alumni.ReqItApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C59E849C1C87883D000B3C90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReqItApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.ateneo.alumni.ReqItApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C59E84801C87883D000B3C90 /* Build configuration list for PBXProject "ReqItApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C59E84981C87883D000B3C90 /* Debug */,
+				C59E84991C87883D000B3C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C59E849A1C87883D000B3C90 /* Build configuration list for PBXNativeTarget "ReqItApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C59E849B1C87883D000B3C90 /* Debug */,
+				C59E849C1C87883D000B3C90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C59E84901C87883D000B3C90 /* ReqItApp.xcdatamodel */,
+			);
+			currentVersion = C59E84901C87883D000B3C90 /* ReqItApp.xcdatamodel */;
+			path = ReqItApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C59E847D1C87883D000B3C90 /* Project object */;
+}
