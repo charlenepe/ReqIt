@@ -25,6 +25,7 @@
 		C59E84BA1C878C46000B3C90 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E84B71C878C46000B3C90 /* Bolts.framework */; };
 		C59E84BB1C878C46000B3C90 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E84B81C878C46000B3C90 /* FBSDKCoreKit.framework */; };
 		C59E84BC1C878C46000B3C90 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C59E84B91C878C46000B3C90 /* FBSDKLoginKit.framework */; };
+		C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84BE1C87BD6F000B3C90 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C59E84B71C878C46000B3C90 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		C59E84B81C878C46000B3C90 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C59E84B91C878C46000B3C90 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		C59E84BE1C87BD6F000B3C90 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		C59E84871C87883D000B3C90 /* ReqItApp */ = {
 			isa = PBXGroup;
 			children = (
+				C59E84BD1C87BD35000B3C90 /* Services */,
 				C59E84B61C878C2A000B3C90 /* Frameworks */,
 				C59E84AF1C878915000B3C90 /* View */,
 				C59E84AD1C87890D000B3C90 /* Constants.swift */,
@@ -149,6 +152,14 @@
 				C59E84B91C878C46000B3C90 /* FBSDKLoginKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C59E84BD1C87BD35000B3C90 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C59E84BE1C87BD6F000B3C90 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +295,7 @@
 				C59E84AE1C87890D000B3C90 /* Constants.swift in Sources */,
 				C59E84B51C878921000B3C90 /* MaterialView.swift in Sources */,
 				C59E84B31C878921000B3C90 /* MaterialButton.swift in Sources */,
+				C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
