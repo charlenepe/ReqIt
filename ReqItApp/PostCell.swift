@@ -10,8 +10,10 @@ import UIKit
 
 class PostCell: UITableViewCell {
     
+
     @IBOutlet weak var profileImg: UIImageView!
-    
+
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
