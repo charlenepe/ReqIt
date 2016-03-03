@@ -6,15 +6,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/ViewController.swift"
-            timestampString = "478671301.403105"
+            timestampString = "478678586.317473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "fbBtnPressed(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/ViewController.swift"
-            timestampString = "478671301.403105"
+            timestampString = "478678586.317473"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "fbBtnPressed(_:)"
             landmarkType = "5">
             <Locations>
@@ -42,11 +42,11 @@
                   moduleName = "ReqItApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlpe/ReqItApp/ReqItApp/ViewController.swift"
-                  timestampString = "478670039.373246"
+                  timestampString = "478671880.294315"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
                   offsetFromSymbolStart = "1467">
                </Location>
                <Location
@@ -57,14 +57,30 @@
                   moduleName = "ReqItApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlpe/ReqItApp/ReqItApp/ViewController.swift"
-                  timestampString = "478670039.420168"
+                  timestampString = "478671880.294776"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
                   offsetFromSymbolStart = "23">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReqItApp/ViewController.swift"
+            timestampString = "478679543.70306"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "attemptLogin(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

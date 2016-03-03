@@ -95,7 +95,7 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email Login / Signup" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etB-Uy-Yho">
                                         <rect key="frame" x="20" y="15" width="201" height="24"/>
@@ -121,7 +121,7 @@
                                         </constraints>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erf-oo-kna" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
                                         <rect key="frame" x="177" y="191" width="206" height="35"/>
@@ -134,6 +134,9 @@
                                         <state key="normal" title="Login / Signup">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="attemptLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0o3-iM-tJD"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,6 +180,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="emailField" destination="eCD-L5-6s2" id="9cb-Fk-R6Q"/>
+                        <outlet property="passwordField" destination="66U-LG-Q57" id="QT2-9k-KK6"/>
                         <segue destination="T1C-Yj-XOe" kind="show" identifier="loggedIn" id="RxO-bZ-1Xq"/>
                     </connections>
                 </viewController>
