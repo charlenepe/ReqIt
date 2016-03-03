@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		20132D46E877F9F1BDC87010 /* Pods_ReqItApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7886713385DDD47D97F83F /* Pods_ReqItApp.framework */; };
+		C522EFDD1C88C99400FCC771 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFDC1C88C99400FCC771 /* FeedVC.swift */; };
+		C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFDE1C88CADB00FCC771 /* PostCell.swift */; };
+		C522EFE11C88DCC600FCC771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C522EFE01C88DCC600FCC771 /* Main.storyboard */; };
 		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
 		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
 		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
 		C59E84931C87883D000B3C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59E84921C87883D000B3C90 /* Assets.xcassets */; };
 		C59E84961C87883D000B3C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */; };
-		C59E84A31C87888A000B3C90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E84A21C87888A000B3C90 /* Main.storyboard */; };
 		C59E84A91C8788FB000B3C90 /* NotoSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C59E84A51C8788FB000B3C90 /* NotoSans-Bold.ttf */; };
 		C59E84AA1C8788FB000B3C90 /* NotoSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C59E84A61C8788FB000B3C90 /* NotoSans-BoldItalic.ttf */; };
 		C59E84AB1C8788FB000B3C90 /* NotoSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C59E84A71C8788FB000B3C90 /* NotoSans-Italic.ttf */; };
@@ -32,6 +34,9 @@
 		303C3F7F7C867087A192A053 /* Pods-ReqItApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReqItApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReqItApp/Pods-ReqItApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3A7886713385DDD47D97F83F /* Pods_ReqItApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReqItApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D43E713E7EAD6C2894A7BDC /* Pods-ReqItApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReqItApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReqItApp/Pods-ReqItApp.release.xcconfig"; sourceTree = "<group>"; };
+		C522EFDC1C88C99400FCC771 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C522EFDE1C88CADB00FCC771 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		C522EFE01C88DCC600FCC771 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,7 +44,6 @@
 		C59E84921C87883D000B3C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59E84951C87883D000B3C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C59E84971C87883D000B3C90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C59E84A21C87888A000B3C90 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C59E84A51C8788FB000B3C90 /* NotoSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Bold.ttf"; sourceTree = "<group>"; };
 		C59E84A61C8788FB000B3C90 /* NotoSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-BoldItalic.ttf"; sourceTree = "<group>"; };
 		C59E84A71C8788FB000B3C90 /* NotoSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSans-Italic.ttf"; sourceTree = "<group>"; };
@@ -86,6 +90,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C522EFDB1C88C94100FCC771 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C59E848A1C87883D000B3C90 /* ViewController.swift */,
+				C522EFDC1C88C99400FCC771 /* FeedVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		C59E847C1C87883D000B3C90 = {
 			isa = PBXGroup;
 			children = (
@@ -107,14 +120,14 @@
 		C59E84871C87883D000B3C90 /* ReqItApp */ = {
 			isa = PBXGroup;
 			children = (
+				C522EFDB1C88C94100FCC771 /* Controller */,
 				C59E84BD1C87BD35000B3C90 /* Services */,
 				C59E84B61C878C2A000B3C90 /* Frameworks */,
 				C59E84AF1C878915000B3C90 /* View */,
 				C59E84AD1C87890D000B3C90 /* Constants.swift */,
+				C522EFE01C88DCC600FCC771 /* Main.storyboard */,
 				C59E84A41C8788DF000B3C90 /* Resources */,
 				C59E84881C87883D000B3C90 /* AppDelegate.swift */,
-				C59E848A1C87883D000B3C90 /* ViewController.swift */,
-				C59E84A21C87888A000B3C90 /* Main.storyboard */,
 				C59E84921C87883D000B3C90 /* Assets.xcassets */,
 				C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */,
 				C59E84971C87883D000B3C90 /* Info.plist */,
@@ -140,6 +153,7 @@
 				C59E84B01C878921000B3C90 /* MaterialButton.swift */,
 				C59E84B11C878921000B3C90 /* MaterialTextField.swift */,
 				C59E84B21C878921000B3C90 /* MaterialView.swift */,
+				C522EFDE1C88CADB00FCC771 /* PostCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -223,8 +237,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C522EFE11C88DCC600FCC771 /* Main.storyboard in Resources */,
 				C59E84A91C8788FB000B3C90 /* NotoSans-Bold.ttf in Resources */,
-				C59E84A31C87888A000B3C90 /* Main.storyboard in Resources */,
 				C59E84AA1C8788FB000B3C90 /* NotoSans-BoldItalic.ttf in Resources */,
 				C59E84AB1C8788FB000B3C90 /* NotoSans-Italic.ttf in Resources */,
 				C59E84961C87883D000B3C90 /* LaunchScreen.storyboard in Resources */,
@@ -288,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C522EFDD1C88C99400FCC771 /* FeedVC.swift in Sources */,
 				C59E84B41C878921000B3C90 /* MaterialTextField.swift in Sources */,
 				C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */,
 				C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */,
@@ -296,6 +311,7 @@
 				C59E84B51C878921000B3C90 /* MaterialView.swift in Sources */,
 				C59E84B31C878921000B3C90 /* MaterialButton.swift in Sources */,
 				C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */,
+				C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
