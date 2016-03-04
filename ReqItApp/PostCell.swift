@@ -12,6 +12,12 @@ class PostCell: UITableViewCell {
     
 
     @IBOutlet weak var profileImg: UIImageView!
+    @IBOutlet weak var descriptionText: UITextView!
+    @IBOutlet weak var postsLbl: UILabel!
+    
+
+    
+    var post: Post!
 
 
 
@@ -23,10 +29,13 @@ class PostCell: UITableViewCell {
         profileImg.layer.cornerRadius = profileImg.frame.size.width/2
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(post: Post){
+        self.post = post
+        self.descriptionText.text = post.postDescription
+        self.postsLbl.text = "\(post.bids) offers"
+        }
     }
+    
+    
 
-}
+
