@@ -14,9 +14,14 @@ class Post {
     private var _bids: Int!
     private var _username: String!
     private var _postkey: String!
+    private var _title: String!
     
     var postDescription: String! {
         return _postDescription
+    }
+    
+    var title: String! {
+        return _title
     }
     
     var imgURL: String? {
@@ -36,12 +41,12 @@ class Post {
         return _postkey
     }
     
-    init(description: String, imgURL: String?, bids: Int!, username: String){
+    init(description: String!, imgURL: String?, bids: Int!, username: String, title: String!){
         self._postDescription = postDescription
         self._imgURL = imgURL
         self._bids = bids
         self._username = username
-        self._postDescription = postDescription
+        self._title = title
         
     }
     
@@ -60,11 +65,9 @@ class Post {
             self._postDescription = desc
         }
         
-        
-        
-        
-        
-
+        if let title = dictionary["title"] as? String {
+            self._title = title
+        }
     }
     
     

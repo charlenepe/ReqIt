@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class PostCell: UITableViewCell {
     
@@ -16,8 +17,10 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postsLbl: UILabel!
     
 
+    @IBOutlet weak var favorTitle: UILabel!
     
     var post: Post!
+    var request: Request?
 
 
 
@@ -29,11 +32,14 @@ class PostCell: UITableViewCell {
         profileImg.layer.cornerRadius = profileImg.frame.size.width/2
     }
 
-    func configureCell(post: Post){
+    func configureCell(post: Post, img: UIImage?){
         self.post = post
         self.descriptionText.text = post.postDescription
         self.postsLbl.text = "\(post.bids) offers"
-        }
+        self.favorTitle.text = post.title
+        
+        
+              }
     }
     
     
