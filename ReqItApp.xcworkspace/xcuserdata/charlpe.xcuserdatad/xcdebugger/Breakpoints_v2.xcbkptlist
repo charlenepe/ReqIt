@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/ViewController.swift"
-            timestampString = "478743352.188664"
+            timestampString = "478916072.760524"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "116"
-            endingLineNumber = "116"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "attemptLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -151,11 +151,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/AddingVC.swift"
-            timestampString = "478823616.328112"
+            timestampString = "478892376.960999"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "addNewPost(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReqItApp/AddingVC.swift"
+            timestampString = "478892376.960999"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "addNewPost(_:)"
             landmarkType = "5">
          </BreakpointContent>

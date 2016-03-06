@@ -31,8 +31,35 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     
     @IBAction func addNewPost(sender:UIButton!){
+       
+       let reff = Firebase(url: "https://reqit.firebaseio.com");
+       let uid = reff.authData.uid
+
+
+
+     
+//        ref.createUser("bobtony@example.com", password: "correcthorsebatterystaple",
+//            withValueCompletionBlock: { error, result in
+//                if error != nil {
+//                    // There was an error creating the account
+//                } else {
+//                    let uid = result["uid"] as? String
+//
+//                }
+//        let uid = result["uid"] as? String
+
         
+
+        
+    
         let ref = Firebase(url: "https://reqit.firebaseio.com/posts")
+        let userpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts")
+  
+        
+ 
+
+     
+        
         
         var desc = descTxt.text
         var favtxt = favorTxt.text
@@ -47,6 +74,7 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         
         //access the userid!!!
         ref.childByAppendingPath("\(favtxt!)").setValue(favor)
+        userpost.childByAppendingPath("\(favtxt!)").setValue(favor)
         
         showAddedAlert("Favor Request", msg: "Your favor request has been successfully posted")
         favorTxt.text = ""
