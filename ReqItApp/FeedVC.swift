@@ -68,6 +68,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
             
             cell.configureCell(post,img:img)
+            cell.showBtns(post)
+            
             return cell
         } else {
             return PostCell()

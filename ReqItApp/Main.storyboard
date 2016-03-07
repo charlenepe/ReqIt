@@ -293,10 +293,10 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-ug-0Qe">
-                                                                            <rect key="frame" x="0.0" y="84" width="243" height="118"/>
+                                                                            <rect key="frame" x="0.0" y="84" width="249" height="118"/>
                                                                             <subviews>
                                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-hC-cjH">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="243" height="118"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="249" height="118"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="T3a-5L-BZK"/>
@@ -387,10 +387,14 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="bidBtn" destination="wbR-UN-Rsv" id="I2k-ah-IFw"/>
+                                            <outlet property="deleteBtn" destination="EYr-yC-hum" id="6Yi-Ff-Jdk"/>
                                             <outlet property="descriptionText" destination="fbr-hC-cjH" id="OsH-Xj-xWw"/>
                                             <outlet property="favorTitle" destination="6cl-Ah-3Xc" id="O4E-0t-H6V"/>
                                             <outlet property="postsLbl" destination="FAu-HX-7i2" id="D9L-Vb-dVq"/>
                                             <outlet property="profileImg" destination="htm-T3-24o" id="ncf-ia-arG"/>
+                                            <outlet property="unbidBtn" destination="SRT-aI-Lzh" id="Iic-I7-aXq"/>
+                                            <outlet property="updateBtn" destination="GVg-Ru-lXC" id="7II-bV-0PI"/>
                                             <outlet property="userLbl" destination="Nn5-oa-PZE" id="cGx-sk-lSm"/>
                                         </connections>
                                     </tableViewCell>

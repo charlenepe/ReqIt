@@ -16,7 +16,11 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var descriptionText: UITextView!
     @IBOutlet weak var postsLbl: UILabel!
     
+    @IBOutlet weak var unbidBtn: MaterialButton!
+    @IBOutlet weak var deleteBtn: UIButton!
+    @IBOutlet weak var bidBtn: MaterialButton!
 
+    @IBOutlet weak var updateBtn: UIButton!
     @IBOutlet weak var userLbl: UILabel!
     @IBOutlet weak var favorTitle: UILabel!
     
@@ -39,9 +43,29 @@ class PostCell: UITableViewCell {
         self.postsLbl.text = "\(post.bids) offers"
         self.favorTitle.text = post.title
         self.userLbl.text = post.username
-        
-        
               }
+    
+    func showBtns(post: Post){
+        self.post = post
+        if post.username == uid {
+            updateBtn.hidden = false
+            deleteBtn.hidden = false
+            bidBtn.hidden = true
+            unbidBtn.hidden = true
+        } else {
+            updateBtn.hidden = true
+            deleteBtn.hidden = true
+            bidBtn.hidden = false
+            unbidBtn.hidden = false
+        }
+    
+    
+    }
+    
+
+    
+    
+    
     }
     
     
