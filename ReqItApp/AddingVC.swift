@@ -16,6 +16,8 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var favorTxt: UITextField!
     @IBOutlet weak var descTxt: UITextView!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.favorTxt.delegate = self
@@ -36,19 +38,6 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         let uid = reff.authData.uid
 
         let uuid = NSUUID().UUIDString
-
-        
-//        ref.createUser("bobtony@example.com", password: "correcthorsebatterystaple",
-//            withValueCompletionBlock: { error, result in
-//                if error != nil {
-//                    // There was an error creating the account
-//                } else {
-//                    let uid = result["uid"] as? String
-//
-//                }
-//        let uid = result["uid"] as? String
-
-        
 
         
     

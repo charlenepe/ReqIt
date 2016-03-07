@@ -13,6 +13,7 @@
 		C522EFE11C88DCC600FCC771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C522EFE01C88DCC600FCC771 /* Main.storyboard */; };
 		C522EFE41C893F5F00FCC771 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFE31C893F5E00FCC771 /* Post.swift */; };
 		C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0081C8A0BF100FCC771 /* AddingVC.swift */; };
+		C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D41C8D404700FCC771 /* UpdateVC.swift */; };
 		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
 		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
 		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 		C522EFE01C88DCC600FCC771 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C522EFE31C893F5E00FCC771 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C522F0081C8A0BF100FCC771 /* AddingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingVC.swift; sourceTree = "<group>"; };
+		C522F0D41C8D404700FCC771 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				C59E848A1C87883D000B3C90 /* ViewController.swift */,
 				C522EFDC1C88C99400FCC771 /* FeedVC.swift */,
 				C522F0081C8A0BF100FCC771 /* AddingVC.swift */,
+				C522F0D41C8D404700FCC771 /* UpdateVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				C522EFE41C893F5F00FCC771 /* Post.swift in Sources */,
 				C59E84B41C878921000B3C90 /* MaterialTextField.swift in Sources */,
 				C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */,
+				C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */,
 				C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */,
 				C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */,
 				C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */,

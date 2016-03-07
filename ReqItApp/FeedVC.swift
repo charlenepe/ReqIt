@@ -41,6 +41,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
      //listen for whatever change is made in the data
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -73,6 +75,33 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
 
     }
+    
+    
+//    
+//    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+//        if editingStyle == .Delete {
+//            // 1
+//            var reference = Firebase (url:"https://reqit.firebaseio.com/posts981D4B22-0CC9-4D64-9DAA-573EABC225D3")
+//            var reference2 = Firebase (url:"https://reqit.firebaseio.com/\(uid)/posts/981D4B22-0CC9-4D64-9DAA-573EABC225D3")
+//            reference.removeValue()
+//            reference2.removeValue()
+//
+//            //delete the postkey
+//            // 
+//            
+//            
+//        }
+    }
+    
+
+
+    
+    
+    
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
@@ -83,4 +112,4 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     */
 
-}
+

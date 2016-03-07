@@ -22,6 +22,10 @@ let STATUS_ACCOUNT_NONEXIST = -8
 
 let reff = Firebase(url: "https://reqit.firebaseio.com")
 let uid = reff.authData.uid
+let ref = Firebase(url: "https://reqit.firebaseio.com/posts")
+let userpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts")
+
+
 
 
 

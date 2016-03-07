@@ -203,7 +203,7 @@
         <!--Item-->
         <scene sceneID="IA3-4q-veu">
             <objects>
-                <viewController id="T1C-Yj-XOe" customClass="FeedVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FeedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T1C-Yj-XOe" customClass="FeedVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FxM-Ci-ogP"/>
                         <viewControllerLayoutGuide type="bottom" id="syo-Io-Jq3"/>
@@ -293,10 +293,10 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-ug-0Qe">
-                                                                            <rect key="frame" x="0.0" y="84" width="241" height="118"/>
+                                                                            <rect key="frame" x="0.0" y="84" width="243" height="118"/>
                                                                             <subviews>
                                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-hC-cjH">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="241" height="118"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="243" height="118"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="T3a-5L-BZK"/>
@@ -494,10 +494,10 @@
             </objects>
             <point key="canvasLocation" x="1898" y="1209"/>
         </scene>
-        <!--View Controller-->
+        <!--UpdateVC-->
         <scene sceneID="3fK-aU-ROl">
             <objects>
-                <viewController id="W29-8t-3Wo" sceneMemberID="viewController">
+                <viewController id="W29-8t-3Wo" customClass="UpdateVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5h-WS-aBX"/>
                         <viewControllerLayoutGuide type="bottom" id="SEV-E6-TtE"/>
@@ -552,6 +552,9 @@
                                 <state key="normal" title="UPDATE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateActn:" destination="W29-8t-3Wo" eventType="touchUpInside" id="2iu-LV-m0c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cB-wR-DjW">
                                 <rect key="frame" x="51" y="101" width="40" height="30"/>
@@ -566,6 +569,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.71554487180000004" green="0.041491187380000003" blue="0.32031240290000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="descTxt" destination="AUZ-Cu-6yr" id="96G-PP-8sx"/>
+                        <outlet property="favorTxt" destination="VCY-P8-3No" id="YAH-gC-uC9"/>
+                        <outlet property="updateBtn" destination="TkO-th-xqS" id="533-dq-S8q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8RF-mF-8LG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -574,7 +582,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Cgf-VR-mSn">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="TdT-x0-6lq" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabVC" automaticallyAdjustsScrollViewInsets="NO" id="TdT-x0-6lq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3cj-oh-85D">
                         <autoresizingMask key="autoresizingMask"/>
@@ -595,6 +603,6 @@
         <image name="fb" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Lb-Jq-X2b"/>
+        <segue reference="RxO-bZ-1Xq"/>
     </inferredMetricsTieBreakers>
 </document>
