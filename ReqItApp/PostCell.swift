@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Firebase
 
 class PostCell: UITableViewCell {
     
@@ -62,12 +63,27 @@ class PostCell: UITableViewCell {
     
     }
     
+    @IBAction func deleteAction(sender: UIButton){
+        
+        deletethis(post)
+        
+    }
+    
+    func deletethis(post: Post){
+        let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(post.postKey)")
+        let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(post.postKey)")
+        
+        path.removeValue()
+        path2.removeValue()
+    }
+    
+    
 
     
     
     
     }
-    
+
     
 
 
