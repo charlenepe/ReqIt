@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
@@ -97,13 +97,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
 
 
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
     /*
     // MARK: - Navigation
 

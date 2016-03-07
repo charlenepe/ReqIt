@@ -39,6 +39,7 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
 ///need to put a reference linking the table view cell to the update fields
         
         
+        
         var desc = descTxt.text
         var favtxt = favorTxt.text
         

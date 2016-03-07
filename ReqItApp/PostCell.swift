@@ -77,10 +77,18 @@ class PostCell: UITableViewCell {
         path2.removeValue()
     }
     
+    @IBAction func updateAction(sender: UIButton){
+        updatethis(post)
+        
+    }
+    
+    func updatethis(post: Post){
+        var a = post.title
+        var b = post.postDescription
+    }
+    
     
 
-    
-    
     
     }
 
