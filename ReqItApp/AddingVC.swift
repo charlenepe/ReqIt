@@ -32,12 +32,12 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     @IBAction func addNewPost(sender:UIButton!){
        
-       let reff = Firebase(url: "https://reqit.firebaseio.com");
-       let uid = reff.authData.uid
+       let reff = Firebase(url: "https://reqit.firebaseio.com")
+        let uid = reff.authData.uid
 
+        let uuid = NSUUID().UUIDString
 
-
-     
+        
 //        ref.createUser("bobtony@example.com", password: "correcthorsebatterystaple",
 //            withValueCompletionBlock: { error, result in
 //                if error != nil {
@@ -55,11 +55,7 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         let ref = Firebase(url: "https://reqit.firebaseio.com/posts")
         let userpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts")
   
-        
- 
 
-     
-        
         
         var desc = descTxt.text
         var favtxt = favorTxt.text
@@ -69,12 +65,12 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         if favtxt != "" && desc != nil, let existdesc = desc, let existfavtxt = favtxt {
             
 
-        var favor = ["bids": 0, "description": "\(desc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(favtxt!)"]
+            var favor = ["bids": 0, "description": "\(desc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(favtxt!)", "username":"\(uid)"]
         
         
         //access the userid!!!
-        ref.childByAppendingPath("\(favtxt!)").setValue(favor)
-        userpost.childByAppendingPath("\(favtxt!)").setValue(favor)
+        ref.childByAppendingPath("\(uuid)").setValue(favor)
+        userpost.childByAppendingPath("\(uuid)").setValue(favor)
         
         showAddedAlert("Favor Request", msg: "Your favor request has been successfully posted")
         favorTxt.text = ""

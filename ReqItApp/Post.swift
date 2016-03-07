@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Firebase
 
 class Post {
     private var _postDescription: String!
@@ -68,6 +69,9 @@ class Post {
         if let title = dictionary["title"] as? String {
             self._title = title
         }
+        
+        if let username = dictionary["username"] as? String {
+            self._username = username }
     }
     
     

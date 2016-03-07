@@ -17,6 +17,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var postsLbl: UILabel!
     
 
+    @IBOutlet weak var userLbl: UILabel!
     @IBOutlet weak var favorTitle: UILabel!
     
     var post: Post!
@@ -37,6 +38,7 @@ class PostCell: UITableViewCell {
         self.descriptionText.text = post.postDescription
         self.postsLbl.text = "\(post.bids) offers"
         self.favorTitle.text = post.title
+        self.userLbl.text = post.username
         
         
               }
