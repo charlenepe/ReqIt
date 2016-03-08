@@ -15,6 +15,7 @@ class BidVC: UIViewController {
     var bidInt: Int!
     var timer = NSTimer()
     var postKey: String!
+    var passUsername: String!
     
     
     @IBOutlet weak var secondFvrdescTxt: UITextView!
@@ -56,15 +57,15 @@ class BidVC: UIViewController {
             var biddesc = secondFvrdescTxt.text
             var bidtxt = secondFvr.text
             let ref = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)/offers")
-            let bidpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(postKey)/offers")
+            let bidpost = Firebase(url: "https://reqit.firebaseio.com/users/\(passUsername)/posts/\(postKey)/offers")
             let bidid = NSUUID().UUIDString
             
             var bid = ["description": "\(biddesc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(bidtxt!)", "username":"\(uid)"]
             
             
             //access the userid!!!
-            ref.childByAppendingPath("\(bidid)").setValue(bid)
-            bidpost.childByAppendingPath("\(bidid)").setValue(bid)
+            ref.childByAppendingPath("\(bidid)").setValue(bid) //this one is okay
+            bidpost.childByAppendingPath("\(bidid)").setValue(bid) //this one is not okay-- the username should be different :D
             //append to "../bids"
             
             showBidAlert("Bid Request", msg: "Your offer has been posted")

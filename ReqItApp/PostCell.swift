@@ -49,7 +49,10 @@ class PostCell: UITableViewCell {
               }
     
     func showBtns(post: Post){
-        self.post = post
+        
+       
+        self.post! = post
+
         if post.username == uid {
             updateBtn.hidden = false
             deleteBtn.hidden = false

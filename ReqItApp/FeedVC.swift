@@ -15,6 +15,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var valuetoPass_desc: String!
     var postKey: String!
     var bidInt: Int!
+    var passUsername: String!
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -77,7 +78,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
             
-
             
             cell.configureCell(post,img:img)
             cell.showBtns(post)
@@ -104,6 +104,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             valuetoPass = currentCell.favorTitle.text
             valuetoPass_desc = currentCell.descriptionText.text
             postKey = currentCell.post.postKey
+           
             
             performSegueWithIdentifier("seguetoVC", sender: self)
         }
@@ -111,6 +112,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if currentCell.bidBtn.hidden == false {
               bidInt = currentCell.post.bids
               postKey = currentCell.post.postKey
+              passUsername = currentCell.post.username
             
               performSegueWithIdentifier("seguetoBidVC", sender: self)
         }
@@ -140,7 +142,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             let bidviewController = segue.destinationViewController as! BidVC
             // your new view controller should have property that will store passed value
             bidviewController.postKey = postKey
-            bidviewController.bidInt = bidInt        }
+            bidviewController.bidInt = bidInt
+            bidviewController.passUsername = passUsername
+        }
 
         
         
