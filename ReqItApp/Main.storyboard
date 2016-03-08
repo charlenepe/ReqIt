@@ -230,19 +230,19 @@
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ltd-cI-Anr">
                                                             <rect key="frame" x="39" y="16" width="304" height="252"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Dr-Uc-UPn">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Dr-Uc-UPn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="304" height="202"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-FK-Zr3">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cMG-FK-Zr3">
                                                                             <rect key="frame" x="0.0" y="0.0" width="274" height="74"/>
                                                                             <subviews>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-qK-XMP">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="vlV-qK-XMP">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="176" height="74"/>
                                                                                     <subviews>
-                                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FVg-K7-YSC">
+                                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FVg-K7-YSC">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="176" height="50"/>
                                                                                             <subviews>
-                                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" layoutMarginsFollowReadableWidth="YES" image="IMG-4163" translatesAutoresizingMaskIntoConstraints="NO" id="htm-T3-24o">
+                                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" layoutMarginsFollowReadableWidth="YES" image="IMG-4163" translatesAutoresizingMaskIntoConstraints="NO" id="htm-T3-24o">
                                                                                                     <rect key="frame" x="0.0" y="0.0" width="176" height="50"/>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="width" constant="50" id="3Rm-4s-3nx"/>
@@ -254,7 +254,7 @@
                                                                                                 <constraint firstItem="htm-T3-24o" firstAttribute="leading" secondItem="FVg-K7-YSC" secondAttribute="leading" id="8Vh-e7-Bc0"/>
                                                                                             </constraints>
                                                                                         </stackView>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="charlpe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-oa-PZE">
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="charlpe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-oa-PZE">
                                                                                             <rect key="frame" x="0.0" y="50" width="176" height="24"/>
                                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -268,16 +268,16 @@
                                                                                         <constraint firstItem="FVg-K7-YSC" firstAttribute="leading" secondItem="vlV-qK-XMP" secondAttribute="leading" id="yre-zI-gBO"/>
                                                                                     </constraints>
                                                                                 </stackView>
-                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-io-k9o">
+                                                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="LiS-io-k9o">
                                                                                     <rect key="frame" x="181" y="12" width="93" height="50"/>
                                                                                     <subviews>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Favor title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-Ah-3Xc">
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Favor title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cl-Ah-3Xc">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="93" height="26"/>
                                                                                             <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="19"/>
                                                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                             <nil key="highlightedColor"/>
                                                                                         </label>
-                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="3 offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAu-HX-7i2">
+                                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="3 offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAu-HX-7i2">
                                                                                             <rect key="frame" x="0.0" y="26" width="61" height="24"/>
                                                                                             <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -294,10 +294,10 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-ug-0Qe">
-                                                                            <rect key="frame" x="0.0" y="84" width="265" height="118"/>
+                                                                            <rect key="frame" x="0.0" y="84" width="275" height="118"/>
                                                                             <subviews>
                                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-hC-cjH">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="265" height="118"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="275" height="118"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="T3a-5L-BZK"/>
@@ -323,13 +323,13 @@
                                                                         <constraint firstAttribute="trailingMargin" secondItem="cMG-FK-Zr3" secondAttribute="trailing" constant="30" id="jnu-ZZ-oX3"/>
                                                                     </constraints>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-oI-BS9">
+                                                                <stackView opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qh0-oI-BS9">
                                                                     <rect key="frame" x="0.0" y="222" width="304" height="30"/>
                                                                     <subviews>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVm-CK-Mxz">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hVm-CK-Mxz">
                                                                             <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-UN-Rsv" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
+                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbR-UN-Rsv" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <state key="normal" title="BID">
@@ -341,10 +341,10 @@
                                                                                 </button>
                                                                             </subviews>
                                                                         </stackView>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S20-Lj-BBe">
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="S20-Lj-BBe">
                                                                             <rect key="frame" x="157" y="0.0" width="147" height="30"/>
                                                                             <subviews>
-                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRT-aI-Lzh" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
+                                                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRT-aI-Lzh" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="147" height="30"/>
                                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     <state key="normal" title="UNBID">
@@ -381,6 +381,17 @@
                                                                 <action selector="deleteAction:" destination="8Tt-rF-RQZ" eventType="touchUpInside" id="cMf-RC-MoL"/>
                                                             </connections>
                                                         </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="va1-8V-yBM">
+                                                            <rect key="frame" x="178" y="290" width="68" height="30"/>
+                                                            <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <state key="normal" title="APPROVE">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="deleteAction:" destination="8Tt-rF-RQZ" eventType="touchUpInside" id="wFO-rj-GPu"/>
+                                                                <segue destination="c1F-De-lP4" kind="show" id="qUe-ZQ-aCt"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -395,6 +406,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
+                                            <outlet property="approveBtn" destination="va1-8V-yBM" id="b2p-sz-rcC"/>
                                             <outlet property="bidBtn" destination="wbR-UN-Rsv" id="I2k-ah-IFw"/>
                                             <outlet property="deleteBtn" destination="EYr-yC-hum" id="6Yi-Ff-Jdk"/>
                                             <outlet property="descriptionText" destination="fbr-hC-cjH" id="OsH-Xj-xWw"/>
@@ -427,6 +439,75 @@
             <point key="canvasLocation" x="2157" y="428"/>
         </scene>
         <!--Item-->
+        <scene sceneID="7bn-TP-9mz">
+            <objects>
+                <viewController id="c1F-De-lP4" customClass="OffersVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CyR-PU-MeA"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Cc-I6-Xo5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYp-yG-Aen">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="OFFERS RECEIVED " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4A-8f-ulj">
+                                <rect key="frame" x="62" y="38" width="200" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="i7R-hX-ZQl">
+                                <rect key="frame" x="0.0" y="72" width="600" height="287"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="CdL-Ky-N5R" customClass="OfferCell" customModule="ReqItApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="CdL-Ky-N5R" id="YPw-BS-CFb">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgV-HO-qgt">
+                                                    <rect key="frame" x="134" y="36" width="68" height="30"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="APPROVE">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="qgV-HO-qgt" firstAttribute="centerX" secondItem="YPw-BS-CFb" secondAttribute="centerX" id="791-4n-a4A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="approveBtn" destination="qgV-HO-qgt" id="DZv-qZ-TXm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhL-hI-XiX">
+                                <rect key="frame" x="23" y="7" width="40" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="BACK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="TdT-x0-6lq" kind="show" id="HGx-eq-oT1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71554487180000004" green="0.041491187380000003" blue="0.32031240290000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="vNt-wx-dRr"/>
+                    <connections>
+                        <outlet property="offerstableView" destination="i7R-hX-ZQl" id="fkl-1k-K8T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xa1-x5-ztE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2821" y="-279"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="7Iv-8J-oRx">
             <objects>
                 <viewController id="Gg7-gL-mch" customClass="AddingVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -444,7 +525,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YHx-1V-M72">
                                         <rect key="frame" x="0.0" y="0.0" width="516" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYy-Q6-cp2">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DYy-Q6-cp2">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -524,7 +605,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8nf-mz-tml">
                                         <rect key="frame" x="0.0" y="0.0" width="516" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-Bg-9nU">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAp-Bg-9nU">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -609,7 +690,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-jf-77L">
                                         <rect key="frame" x="0.0" y="0.0" width="516" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF5-M0-G0V">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Favor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HF5-M0-G0V">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="30"/>
                                                 <fontDescription key="fontDescription" name="NotoSans" family="Noto Sans" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -700,6 +781,6 @@
         <image name="fb" width="240" height="240"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tbH-y8-f8q"/>
+        <segue reference="HGx-eq-oT1"/>
     </inferredMetricsTieBreakers>
 </document>

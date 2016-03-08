@@ -22,6 +22,9 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var bidBtn: MaterialButton!
 
     @IBOutlet weak var updateBtn: UIButton!
+    
+    @IBOutlet weak var approveBtn: UIButton!
+    
     @IBOutlet weak var userLbl: UILabel!
     @IBOutlet weak var favorTitle: UILabel!
     
@@ -56,6 +59,7 @@ class PostCell: UITableViewCell {
         if post.username == uid {
             updateBtn.hidden = false
             deleteBtn.hidden = false
+            approveBtn.hidden = false
             bidBtn.hidden = true
             unbidBtn.hidden = true
         } else {
@@ -63,6 +67,7 @@ class PostCell: UITableViewCell {
             deleteBtn.hidden = true
             bidBtn.hidden = false
             unbidBtn.hidden = false
+            approveBtn.hidden = true
         }
     
     
