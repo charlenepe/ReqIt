@@ -11,8 +11,14 @@ import Firebase
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
+    var valuetoPass: String!
+    var valuetoPass_desc: String!
+    var postKey: String!
+    var bidCount: String!
+    
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
+
     static var imageCache = NSCache()
 
     override func viewDidLoad() {
@@ -62,10 +68,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             var img: UIImage?
+           
             
             if let url = post.imgURL {
             img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
+            
+
             
             cell.configureCell(post,img:img)
             cell.showBtns(post)
@@ -77,6 +86,121 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
 
     }
+    
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+        
+        // Get Cell Label
+        let indexPath = tableView.indexPathForSelectedRow!
+        let currentCell = tableView.cellForRowAtIndexPath(indexPath) as! PostCell
+        
+    /// Right now, you have to click the whole cell to be able to pass the data to UpdateVC :| SHOULD ONLY BE TRIGERRED WHEN THE UPDATE BUTTON IS CLICKED!!!!
+        
+        if currentCell.updateBtn.hidden == false {
+            valuetoPass = currentCell.favorTitle.text
+            valuetoPass_desc = currentCell.descriptionText.text
+            postKey = currentCell.post.postKey
+            performSegueWithIdentifier("seguetoVC", sender: self)
+        }
+        
+        if currentCell.bidBtn.hidden == false {
+              bidCount = currentCell.postsLbl.text
+              performSegueWithIdentifier("seguetoBidVC", sender: self)
+        }
+        
+    }
+    
+ 
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
+        
+        if segue.identifier == "seguetoVC" {
+            
+            // initialize new view controller and cast it as your view controller
+            let viewController = segue.destinationViewController as! UpdateVC
+            // your new view controller should have property that will store passed value
+            viewController.toPassDesc = valuetoPass_desc
+            viewController.toPassTitle = valuetoPass
+            viewController.postKey = postKey
+        }
+        
+        if segue.identifier == "seguetoBidVC" {
+            
+            // initialize new view controller and cast it as your view controller
+            let bidviewController = segue.destinationViewController as! BidVC
+            // your new view controller should have property that will store passed value
+     
+            bidviewController.bidCount = bidCount
+        }
+
+        
+        
+    }
+    
+    
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let post = posts[indexPath.row]
+//        print(post.title)
+//        performSegueWithIdentifier("seguetoVC", sender: self)
+//    }
+//    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "seguetoVC" {
+//            let viewController = segue.destinationViewController as! UpdateVC
+//            if let post = sender as? Post {
+//                viewController.toPassTitle = post.title
+//                viewController.toPassDesc = post.postDescription
+//            }
+//        }
+//    }
+    
+  
+
+//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+//        
+//        let post = posts[indexPath.row]
+//        
+//        valuetoPass = post.title
+//        valuetoPass_desc = post.postDescription
+//        
+//        performSegueWithIdentifier("seguetoVC", sender: post)
+//        
+//    }
+    
+    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        let viewController = segue.destinationViewController as! UpdateVC
+//    
+//        // Prepare the destination view controller with the selected name
+//        viewController
+//            .prepareForPost(
+//              posts[tableView.indexPath.row!])
+//
+//    }
+//    
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+//        if segue.identifier == "seguetoVC" {
+//            let viewController = segue.destinationViewController as! UpdateVC
+//            let post = sender as? Post
+//            viewController.toPassTitle = post!.title
+//            viewController.toPassDesc = post!.postDescription
+//        }
+//    }
+//    
+    
+    }
+
+
+
+
+    
+    
+    
+    
     
     
 //    
@@ -93,7 +217,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 //            
 //            
 //        }
-    }
+
     
 
 

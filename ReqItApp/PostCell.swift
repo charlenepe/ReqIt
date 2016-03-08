@@ -78,16 +78,14 @@ class PostCell: UITableViewCell {
     }
     
     @IBAction func updateAction(sender: UIButton){
-        updatethis(post)
+        clicked(sender)
+    }
+    
+  
+    func clicked(sender: UIButton)-> Bool{
+        return true
         
     }
-    
-    func updatethis(post: Post){
-        var a = post.title
-        var b = post.postDescription
-    }
-    
-    
 
     
     }

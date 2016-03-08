@@ -15,13 +15,22 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     @IBOutlet weak var favorTxt: UITextField!
     @IBOutlet weak var descTxt: UITextView!
     var timer = NSTimer()
+    var toPassTitle:String!
+    var toPassDesc:String!
+    var postKey: String!
+    var post: Post!
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.favorTxt.delegate = self
         self.descTxt.delegate = self
-        
+        favorTxt.text = toPassTitle
+        descTxt.text = toPassDesc
+
+//        descTxt.text = toPassDesc
+
 
 
         // Do any additional setup after loading the view.
@@ -35,39 +44,9 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     
     @IBAction func updateActn(sender: AnyObject) {
-        
-///need to put a reference linking the table view cell to the update fields
-        
-        
-        
-        var desc = descTxt.text
-        var favtxt = favorTxt.text
-        
-        
-        
-        if favtxt != "" && desc != nil, let existdesc = desc, let existfavtxt = favtxt {
-            
-            
-            var favor = ["bids": 0, "description": "\(desc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(favtxt!)", "username":"\(uid)"]
-            
-            
-            //access the userid!!!
-       
-//            usersRef.updateChildValues([
-//                "alanisawesome/nickname": "Alan The Machine",
-//                "gracehop/nickname": "Amazing Grace"
-//                ])
-            
-            
-            showUpdatedAlert("Favor Request", msg: "Your favor request has been successfully updated")
+            updatethis(postKey)
             favorTxt.text = ""
             descTxt.text = ""
-            timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "segue", userInfo: nil, repeats: true)
-            
-        } else {
-            showUpdatedAlert("Error", msg: "Please recheck fields. Cannot leave favor title and description blank.")
-        }
-
         
     }
     
@@ -86,8 +65,31 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         self.presentViewController(nextViewController, animated:true, completion:nil)
         
     }
-
     
+    func updatethis(postKey: String){
+        let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)")
+        let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(postKey)")
+        
+        let favortxt = favorTxt.text
+        let desctxt = descTxt.text
+        
+        if favortxt != "" && desctxt != "" && favortxt != nil && desctxt != nil {
+        
+            let updatedfavor = ["title": favorTxt.text, "description": descTxt.text]
+        
+            path.updateChildValues(updatedfavor)
+            path2.updateChildValues(updatedfavor)
+            showUpdatedAlert("Favor Request", msg: "Your favor request has been successfully updated")
+            timer = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: "segue", userInfo: nil, repeats: true)
+
+        } else {
+            showUpdatedAlert("Error", msg: "Please recheck fields. Cannot leave favor title and description blank.")
+        }
+        
+    }
+    
+    
+
 
     /*
     // MARK: - Navigation

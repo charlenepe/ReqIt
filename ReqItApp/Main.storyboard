@@ -294,10 +294,10 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hfJ-ug-0Qe">
-                                                                            <rect key="frame" x="0.0" y="84" width="255" height="118"/>
+                                                                            <rect key="frame" x="0.0" y="84" width="264" height="118"/>
                                                                             <subviews>
                                                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fbr-hC-cjH">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="255" height="118"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="118"/>
                                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                                     <constraints>
                                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="118" id="T3a-5L-BZK"/>
@@ -336,7 +336,7 @@
                                                                                         <color key="titleColor" red="0.93289262819999996" green="0.93289262819999996" blue="0.93289262819999996" alpha="1" colorSpace="calibratedRGB"/>
                                                                                     </state>
                                                                                     <connections>
-                                                                                        <segue destination="gMO-WY-d5F" kind="show" id="21J-Hn-1Qv"/>
+                                                                                        <segue destination="gMO-WY-d5F" kind="show" identifier="seguetoBidVC" id="21J-Hn-1Qv"/>
                                                                                     </connections>
                                                                                 </button>
                                                                             </subviews>
@@ -583,6 +583,8 @@
                     </view>
                     <connections>
                         <outlet property="bidBtn" destination="J6U-B7-uRP" id="okr-Sq-ZHv"/>
+                        <outlet property="secondFvr" destination="Xt4-Wq-ebR" id="Ace-zn-6g5"/>
+                        <outlet property="secondFvrdescTxt" destination="LXc-jd-tii" id="vYY-G1-02n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JEQ-fN-lXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
