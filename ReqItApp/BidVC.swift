@@ -18,6 +18,7 @@ class BidVC: UIViewController {
     var passUsername: String!
     
     
+    
     @IBOutlet weak var secondFvrdescTxt: UITextView!
     @IBOutlet weak var secondFvr: UITextField!
     
@@ -48,19 +49,25 @@ class BidVC: UIViewController {
         //append to bids
         if secondFvr.text != nil && secondFvrdescTxt.text != nil && secondFvr.text != "" && secondFvrdescTxt.text != "" {
             showBidAlert("Bid", msg: "Bid has been recorded")
-//            bidInt = bidInt + 1
             
-            
-            
+            bidInt = bidInt + 1
             let reff = Firebase(url: "https://reqit.firebaseio.com")
             let uid = reff.authData.uid
             var biddesc = secondFvrdescTxt.text
             var bidtxt = secondFvr.text
             let ref = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)/offers")
             let bidpost = Firebase(url: "https://reqit.firebaseio.com/users/\(passUsername)/posts/\(postKey)/offers")
+            let bidCount = Firebase(url: "https://reqit.firebaseio.com/users/\(passUsername)/posts/\(postKey)") //bidCount for the username portion
+            let bidCountPost = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)") //bidCount for the posts portion
+            
+            
             let bidid = NSUUID().UUIDString
             
             var bid = ["description": "\(biddesc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(bidtxt!)", "username":"\(uid)"]
+            var bid_count = ["bids": bidInt]
+            
+            bidCount.updateChildValues(bid_count)
+            bidCountPost.updateChildValues(bid_count)
             
             
             //access the userid!!!
