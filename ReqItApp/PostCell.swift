@@ -27,6 +27,8 @@ class PostCell: UITableViewCell {
     
     var post: Post!
     var request: Request?
+    let uid = reff.authData.uid
+
 
 
 

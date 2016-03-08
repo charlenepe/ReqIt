@@ -19,6 +19,8 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     var toPassDesc:String!
     var postKey: String!
     var post: Post!
+    let uid = reff.authData.uid
+
     
     
     override func viewDidLoad() {
@@ -67,6 +69,9 @@ class UpdateVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     }
     
     func updatethis(postKey: String){
+        
+        
+        let uid = reff.authData.uid
         let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)")
         let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(postKey)")
         

@@ -21,11 +21,14 @@ let STATUS_ACCOUNT_NONEXIST = -8
 
 
 let reff = Firebase(url: "https://reqit.firebaseio.com")
-let uid = reff.authData.uid
-let ref = Firebase(url: "https://reqit.firebaseio.com/posts")
-let userpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts")
+
+///only of the account already exists: STATUS_ACCOUNT_NONEXIST
 
 
 
+
+
+
+///if the authData.uid doesnt exist yet---the prog might crash!!!
 
 

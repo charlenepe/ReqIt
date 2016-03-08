@@ -60,7 +60,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                         print("Logged in! \(authData)")
                         //create a Firebase user
 
-                        let user = ["provider": authData.provider!, "posts" : ""]
+                        let user = ["provider": authData.provider!, "posts" : "", "bids":""]
                         DataService.ds.createFirebaseUser(authData.uid, user: user)
                             
                             
