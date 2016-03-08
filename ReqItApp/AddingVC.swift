@@ -54,7 +54,7 @@ class AddingVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         if favtxt != "" && desc != nil, let existdesc = desc, let existfavtxt = favtxt {
             
 
-            var favor = ["bids": 0, "description": "\(desc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(favtxt!)", "username":"\(uid)"]
+            var favor = ["bids": 0, "description": "\(desc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(favtxt!)", "username":"\(uid)", "offers":""]
         
         
         //access the userid!!!

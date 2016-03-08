@@ -104,7 +104,7 @@
                   moduleName = "ReqItApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlpe/ReqItApp/ReqItApp/PostCell.swift"
-                  timestampString = "478775022.109347"
+                  timestampString = "479122545.471567"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -119,7 +119,7 @@
                   moduleName = "ReqItApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlpe/ReqItApp/ReqItApp/PostCell.swift"
-                  timestampString = "478775022.109606"
+                  timestampString = "479122545.47198"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -134,7 +134,7 @@
                   moduleName = "ReqItApp"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/charlpe/ReqItApp/ReqItApp/PostCell.swift"
-                  timestampString = "478775022.109771"
+                  timestampString = "479122545.472314"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -199,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479113359.428833"
+            timestampString = "479155454.563953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "247"
-            endingLineNumber = "247">
+            startingLineNumber = "255"
+            endingLineNumber = "255">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -213,11 +213,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479113359.428833"
+            timestampString = "479155454.563953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "248"
-            endingLineNumber = "248">
+            startingLineNumber = "256"
+            endingLineNumber = "256">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -227,12 +227,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479113359.428833"
+            timestampString = "479155454.563953"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReqItApp/Post.swift"
+            timestampString = "479121273.939176"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "Post"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReqItApp/PostCell.swift"
+            timestampString = "479124273.03521"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "showBtns(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

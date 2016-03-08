@@ -14,7 +14,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     var valuetoPass: String!
     var valuetoPass_desc: String!
     var postKey: String!
-    var bidCount: String!
+    var bidInt: Int!
+    
     
     @IBOutlet weak var tableView: UITableView!
     var posts = [Post]()
@@ -31,6 +32,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             self.posts = []
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
+                
+               
                 for snap in snapshots {
                     print("SNAP: \(snap)")
                     if let postdic = snap.value as? Dictionary <String, AnyObject>{
@@ -101,11 +104,14 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             valuetoPass = currentCell.favorTitle.text
             valuetoPass_desc = currentCell.descriptionText.text
             postKey = currentCell.post.postKey
+            
             performSegueWithIdentifier("seguetoVC", sender: self)
         }
         
         if currentCell.bidBtn.hidden == false {
-              bidCount = currentCell.postsLbl.text
+              bidInt = currentCell.post.bids
+              postKey = currentCell.post.postKey
+            
               performSegueWithIdentifier("seguetoBidVC", sender: self)
         }
         
@@ -124,16 +130,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             viewController.toPassDesc = valuetoPass_desc
             viewController.toPassTitle = valuetoPass
             viewController.postKey = postKey
+
         }
         
         if segue.identifier == "seguetoBidVC" {
             
+            
             // initialize new view controller and cast it as your view controller
             let bidviewController = segue.destinationViewController as! BidVC
             // your new view controller should have property that will store passed value
-     
-            bidviewController.bidCount = bidCount
-        }
+            bidviewController.postKey = postKey
+            bidviewController.bidInt = bidInt        }
 
         
         

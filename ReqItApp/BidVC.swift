@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class BidVC: UIViewController {
     
     var bidCount: String!
     var bidInt: Int!
     var timer = NSTimer()
+    var postKey: String!
     
     
     @IBOutlet weak var secondFvrdescTxt: UITextView!
@@ -48,7 +50,28 @@ class BidVC: UIViewController {
 //            bidInt = bidInt + 1
             
             
+            
+            let reff = Firebase(url: "https://reqit.firebaseio.com")
+            let uid = reff.authData.uid
+            var biddesc = secondFvrdescTxt.text
+            var bidtxt = secondFvr.text
+            let ref = Firebase(url: "https://reqit.firebaseio.com/posts/\(postKey)/offers")
+            let bidpost = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(postKey)/offers")
+            let bidid = NSUUID().UUIDString
+            
+            var bid = ["description": "\(biddesc)", "imgURL": "http://cityseed.org/wp-content/....", "title": "\(bidtxt!)", "username":"\(uid)"]
+            
+            
+            //access the userid!!!
+            ref.childByAppendingPath("\(bidid)").setValue(bid)
+            bidpost.childByAppendingPath("\(bidid)").setValue(bid)
+            //append to "../bids"
+            
+            showBidAlert("Bid Request", msg: "Your offer has been posted")
+            
+         
             //this is where we are going to alter the # of bids. We are also going to add a  new bid in the JSON Firebase tree!!!
+            //remember to change the code to reflect +1 bids
             secondFvr.text = ""
             secondFvrdescTxt.text = ""
             
