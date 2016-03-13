@@ -49,6 +49,11 @@ class PostCell: UITableViewCell {
         self.postsLbl.text = "\(post.bids) offers"
         self.favorTitle.text = post.title
         self.userLbl.text = post.username
+//        self.profileImg.image = 
+        
+        
+        
+        
               }
     
     func showBtns(post: Post){

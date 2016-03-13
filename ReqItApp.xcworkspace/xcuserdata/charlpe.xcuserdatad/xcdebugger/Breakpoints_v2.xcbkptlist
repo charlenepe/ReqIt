@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/ViewController.swift"
-            timestampString = "478916072.760524"
+            timestampString = "479275055.239601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
             landmarkName = "attemptLogin(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -199,11 +199,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479164006.001517"
+            timestampString = "479348800.467837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "259"
-            endingLineNumber = "259">
+            startingLineNumber = "313"
+            endingLineNumber = "313">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -213,27 +213,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479164006.001517"
+            timestampString = "479348800.467837"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "260"
-            endingLineNumber = "260">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ReqItApp/FeedVC.swift"
-            timestampString = "479164006.001517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "tableView(_:didSelectRowAtIndexPath:)"
-            landmarkType = "5">
+            startingLineNumber = "314"
+            endingLineNumber = "314">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -259,13 +243,29 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ReqItApp/PostCell.swift"
-            timestampString = "479167742.624242"
+            timestampString = "479275055.239601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "showBtns(_:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReqItApp/AddingVC.swift"
+            timestampString = "479172983.653843"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "AddingVC"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

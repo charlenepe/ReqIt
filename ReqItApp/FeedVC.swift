@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -77,8 +79,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             if let url = post.imgURL {
             img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
-            
-            
+//            
+//            
+//           cell.updateBtn.tag = indexPath.row
+//           cell.updateBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
+//            cell.bidBtn.tag = indexPath.row
+//            cell.bidBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
+       
             cell.configureCell(post,img:img)
             cell.showBtns(post)
             
@@ -90,6 +97,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 
     }
     
+ 
     
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
@@ -98,7 +106,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRowAtIndexPath(indexPath) as! PostCell
         
-    /// Right now, you have to click the whole cell to be able to pass the data to UpdateVC :| SHOULD ONLY BE TRIGERRED WHEN THE UPDATE BUTTON IS CLICKED!!!!
+    /// Right now, you have to click the whole cell to be able to pass the data to UpdateVC :| SHOULD ONLY BE TRIGGERED WHEN THE UPDATE BUTTON IS CLICKED!!!!
         
         if currentCell.updateBtn.hidden == false {
             valuetoPass = currentCell.favorTitle.text
@@ -114,12 +122,45 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
               postKey = currentCell.post.postKey
               passUsername = currentCell.post.username
             
-              performSegueWithIdentifier("seguetoBidVC", sender: self)
+            performSegueWithIdentifier("seguetoBidVC", sender: self)
         }
         
     }
     
- 
+// 
+//    func buttonselect(sender:UIButton) {
+//    
+//        if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell! {
+//
+//        let touchPoint = sender.convertPoint(CGPoint.zero, toView:tableView)
+//        let indexPath = tableView!.indexPathForRowAtPoint(touchPoint)
+//        let currentCell = tableView!.cellForRowAtIndexPath(indexPath!) as! PostCell!
+//    
+//        
+//        if currentCell.updateBtn.hidden == false {
+//            
+//            valuetoPass = currentCell.favorTitle.text
+//            valuetoPass_desc = currentCell.descriptionText.text
+//            postKey = currentCell.post!.postKey
+//     
+//            performSegueWithIdentifier("seguetoVC", sender: self)
+//        }
+//        
+//        if currentCell.bidBtn.hidden == false {
+//            bidInt = currentCell.post.bids
+//            postKey = currentCell.post.postKey
+//            passUsername = currentCell.post.username
+//            
+//            performSegueWithIdentifier("seguetoBidVC", sender: self)
+//        }
+//
+//        
+//        // then countiue your code here
+//      }
+//    }
+////
+//    
+
     
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?){
@@ -201,6 +242,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
 //            viewController.toPassDesc = post!.postDescription
 //        }
 //    }
+    
 //    
     
     }
