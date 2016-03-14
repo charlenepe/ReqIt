@@ -80,6 +80,9 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             img = FeedVC.imageCache.objectForKey(url) as? UIImage
             }
 //            
+            cell.accessoryType = .DetailDisclosureButton
+    
+
 //            
 //           cell.updateBtn.tag = indexPath.row
 //           cell.updateBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -100,10 +103,11 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
  
     
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
+    func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath){
         
+
         // Get Cell Label
-        let indexPath = tableView.indexPathForSelectedRow!
+//        let indexPath = tableView.indexPathForSelectedRow!
         let currentCell = tableView.cellForRowAtIndexPath(indexPath) as! PostCell
         
     /// Right now, you have to click the whole cell to be able to pass the data to UpdateVC :| SHOULD ONLY BE TRIGGERED WHEN THE UPDATE BUTTON IS CLICKED!!!!
@@ -192,7 +196,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//    func tableView(tableView: UITableView, acessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
 //        let post = posts[indexPath.row]
 //        print(post.title)
 //        performSegueWithIdentifier("seguetoVC", sender: self)
