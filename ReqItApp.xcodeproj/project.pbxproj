@@ -15,9 +15,10 @@
 		C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0081C8A0BF100FCC771 /* AddingVC.swift */; };
 		C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D41C8D404700FCC771 /* UpdateVC.swift */; };
 		C522F0D71C8E368900FCC771 /* BidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D61C8E368800FCC771 /* BidVC.swift */; };
-		C522F0DB1C8F7F7B00FCC771 /* OfferCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0DA1C8F7F7B00FCC771 /* OfferCell.swift */; };
-		C522F0DD1C8F7FAC00FCC771 /* OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0DC1C8F7FAC00FCC771 /* OffersVC.swift */; };
 		C522F0DF1C8F822700FCC771 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0DE1C8F822700FCC771 /* Offer.swift */; };
+		C55F8A761C96629C0095BEE3 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A751C96629C0095BEE3 /* OfferVC.swift */; };
+		C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A771C96788E0095BEE3 /* FavorCell.swift */; };
+		C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */; };
 		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
 		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
 		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
@@ -48,9 +49,10 @@
 		C522F0081C8A0BF100FCC771 /* AddingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingVC.swift; sourceTree = "<group>"; };
 		C522F0D41C8D404700FCC771 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
 		C522F0D61C8E368800FCC771 /* BidVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidVC.swift; sourceTree = "<group>"; };
-		C522F0DA1C8F7F7B00FCC771 /* OfferCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferCell.swift; sourceTree = "<group>"; };
-		C522F0DC1C8F7FAC00FCC771 /* OffersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersVC.swift; sourceTree = "<group>"; };
 		C522F0DE1C8F822700FCC771 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		C55F8A751C96629C0095BEE3 /* OfferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
+		C55F8A771C96788E0095BEE3 /* FavorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorCell.swift; sourceTree = "<group>"; };
+		C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorVC.swift; sourceTree = "<group>"; };
 		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +114,8 @@
 				C522F0081C8A0BF100FCC771 /* AddingVC.swift */,
 				C522F0D41C8D404700FCC771 /* UpdateVC.swift */,
 				C522F0D61C8E368800FCC771 /* BidVC.swift */,
-				C522F0DC1C8F7FAC00FCC771 /* OffersVC.swift */,
+				C55F8A751C96629C0095BEE3 /* OfferVC.swift */,
+				C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 				C59E84B11C878921000B3C90 /* MaterialTextField.swift */,
 				C59E84B21C878921000B3C90 /* MaterialView.swift */,
 				C522EFDE1C88CADB00FCC771 /* PostCell.swift */,
-				C522F0DA1C8F7F7B00FCC771 /* OfferCell.swift */,
+				C55F8A771C96788E0095BEE3 /* FavorCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -333,19 +336,20 @@
 			files = (
 				C522EFDD1C88C99400FCC771 /* FeedVC.swift in Sources */,
 				C522EFE41C893F5F00FCC771 /* Post.swift in Sources */,
-				C522F0DB1C8F7F7B00FCC771 /* OfferCell.swift in Sources */,
 				C522F0DF1C8F822700FCC771 /* Offer.swift in Sources */,
 				C59E84B41C878921000B3C90 /* MaterialTextField.swift in Sources */,
 				C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */,
 				C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */,
+				C55F8A761C96629C0095BEE3 /* OfferVC.swift in Sources */,
 				C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */,
-				C522F0DD1C8F7FAC00FCC771 /* OffersVC.swift in Sources */,
+				C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */,
 				C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */,
 				C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */,
 				C59E84AE1C87890D000B3C90 /* Constants.swift in Sources */,
 				C59E84B51C878921000B3C90 /* MaterialView.swift in Sources */,
 				C522F0D71C8E368900FCC771 /* BidVC.swift in Sources */,
 				C59E84B31C878921000B3C90 /* MaterialButton.swift in Sources */,
+				C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */,
 				C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */,
 				C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */,
 			);
