@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FavorCell: UITableViewCell {
     
@@ -14,14 +15,22 @@ class FavorCell: UITableViewCell {
     @IBOutlet weak var mainLbl: UILabel!
     @IBOutlet weak var favorDesc: UITextView!
     
+    //change this to favor next time
+    
+    var post: Post!
+
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
-    func configureCell(text1: String, text: String){
-        mainLbl.text = text
-        favorDesc.text = text1
+    //change this to favor if this is running
+
+    
+    func configureCell(post: Post){
+        mainLbl.text = post.title
+        favorDesc.text = post.postDescription
         
     }
 

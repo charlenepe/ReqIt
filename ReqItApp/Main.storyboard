@@ -246,7 +246,7 @@
             </objects>
             <point key="canvasLocation" x="511" y="428"/>
         </scene>
-        <!--Item-->
+        <!--FeedVC-->
         <scene sceneID="IA3-4q-veu">
             <objects>
                 <viewController storyboardIdentifier="FeedVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T1C-Yj-XOe" customClass="FeedVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -462,7 +462,9 @@
                             <constraint firstItem="qcw-Wf-X4D" firstAttribute="leading" secondItem="D9R-0H-frD" secondAttribute="leadingMargin" id="e9f-0m-gVN"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="bDR-we-LQP"/>
+                    <tabBarItem key="tabBarItem" tag="11" title="" image="newsfeed" selectedImage="newsfeed" id="bDR-we-LQP">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="qcw-Wf-X4D" id="GLO-kv-Vvn"/>
                     </connections>
@@ -471,7 +473,7 @@
             </objects>
             <point key="canvasLocation" x="2171" y="356"/>
         </scene>
-        <!--Item-->
+        <!--AddingVC-->
         <scene sceneID="7Iv-8J-oRx">
             <objects>
                 <viewController id="Gg7-gL-mch" customClass="AddingVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -540,7 +542,9 @@
                             <constraint firstItem="MOl-Da-mPo" firstAttribute="centerX" secondItem="xJA-w1-cC1" secondAttribute="centerX" id="s0k-S9-plf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="crB-qG-7hN"/>
+                    <tabBarItem key="tabBarItem" title="" image="note" selectedImage="note" id="crB-qG-7hN">
+                        <inset key="imageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="descTxt" destination="Lkg-2e-5kR" id="ibW-lc-sMl"/>
                         <outlet property="favorTxt" destination="8np-dG-aHx" id="Coq-Sj-wcV"/>
@@ -742,9 +746,12 @@
             <objects>
                 <tabBarController storyboardIdentifier="tabVC" automaticallyAdjustsScrollViewInsets="NO" id="TdT-x0-6lq" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="3cj-oh-85D">
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="3cj-oh-85D">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <rect key="contentStretch" x="0.0" y="0.10000000000000001" width="1" height="1"/>
                     </tabBar>
                     <connections>
                         <segue destination="T1C-Yj-XOe" kind="relationship" relationship="viewControllers" id="eNz-9h-8ir"/>
@@ -756,7 +763,7 @@
             </objects>
             <point key="canvasLocation" x="1345" y="428"/>
         </scene>
-        <!--Item-->
+        <!--FavorVC-->
         <scene sceneID="vPf-uR-nzg">
             <objects>
                 <viewController id="7w3-CC-7pB" customClass="FavorVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -806,8 +813,17 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQe-mF-LeQ">
+                                                    <rect key="frame" x="315" y="154" width="58" height="30"/>
+                                                    <color key="backgroundColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal" title="ACCEPT">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="aQe-mF-LeQ" secondAttribute="trailing" constant="31" id="QfK-ng-2bJ"/>
+                                                <constraint firstItem="aQe-mF-LeQ" firstAttribute="top" secondItem="7UM-ne-J0s" secondAttribute="topMargin" constant="15" id="bgD-59-Esv"/>
                                                 <constraint firstItem="KBN-CN-tZy" firstAttribute="leading" secondItem="TBT-YX-e4Q" secondAttribute="leading" id="tDR-x4-Afd"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -828,7 +844,9 @@
                             <constraint firstItem="a5V-EO-mXQ" firstAttribute="top" secondItem="nfg-r0-6od" secondAttribute="bottom" constant="20" id="iXF-D9-Wg7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="qPS-FT-DLz"/>
+                    <tabBarItem key="tabBarItem" title="" image="agree" selectedImage="agree" id="qPS-FT-DLz">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="nfg-r0-6od" id="d7X-dh-Ys5"/>
                     </connections>
@@ -839,9 +857,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="agree" width="55" height="55"/>
         <image name="fb" width="240" height="240"/>
+        <image name="newsfeed" width="55" height="55"/>
+        <image name="note" width="40" height="40"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="tbH-y8-f8q"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.71554487180000004" green="0.041491187380000003" blue="0.32031240290000002" alpha="1" colorSpace="calibratedRGB"/>
 </document>
