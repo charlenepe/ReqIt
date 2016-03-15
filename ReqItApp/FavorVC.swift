@@ -16,22 +16,23 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
-    
+    let uid = reff.authData.uid
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-
         
-//        var ref = Firebase(url:"http://reqit.firebase.com/users/\(uid)/posts")
+
+//        
+//        let ref = Firebase(url:"http://reqit.firebase.com/users/\(uid)/posts")
 //        // Attach a closure to read the data at our posts reference
 //        ref.observeEventType(.Value, withBlock: { snapshot in
 //            print(snapshot.value)
 //            }, withCancelBlock: { error in
 //                print(error.description)
-//     
-        
+     
+
         DataService.ds.REF_INDIVPOSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             self.posts = []
@@ -49,7 +50,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
                     }
                 }
             }
-        
+//
             self.tableView.reloadData()
         })
 
