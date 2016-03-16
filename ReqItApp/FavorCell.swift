@@ -14,6 +14,7 @@ class FavorCell: UITableViewCell {
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var mainLbl: UILabel!
     @IBOutlet weak var favorDesc: UITextView!
+    let uid = reff.authData.uid
     
     //change this to favor next time
     
@@ -26,6 +27,24 @@ class FavorCell: UITableViewCell {
     }
     
     //change this to favor if this is running
+
+    
+    func hidePost(post: Post){
+        
+        self.post = post
+        
+        if post.username != uid {
+            mainImg.hidden = true
+            mainLbl.hidden = true
+            favorDesc.hidden = true
+            self.hidden = true
+            //
+        
+          }
+        
+    }
+    
+    
 
     
     func configureCell(post: Post){

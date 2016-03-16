@@ -33,7 +33,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
 //                print(error.description)
      
 
-        DataService.ds.REF_INDIVPOSTS.observeEventType(.Value, withBlock: { snapshot in
+        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             self.posts = []
             
@@ -70,6 +70,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
             
         
               cell.configureCell(post)
+              cell.hidePost(post)
               return cell
         } else {
             return FavorCell()
