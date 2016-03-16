@@ -37,6 +37,8 @@ class PostCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.updateBtn.enabled = false
+        self.bidBtn.enabled = false
     }
     
 //    override func drawRect(rect: CGRect) {
@@ -50,6 +52,7 @@ class PostCell: UITableViewCell {
         self.favorTitle.text = post.title
         self.userLbl.text = post.username
 //        self.profileImg.image = 
+
         
         
         

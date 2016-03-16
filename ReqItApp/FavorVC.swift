@@ -13,9 +13,14 @@ import FBSDKLoginKit
 
 class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
+    var postKey: String!
+    var postTitle: String!
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    var unhiddenposts = [Post]()
     let uid = reff.authData.uid
 
     override func viewDidLoad() {
@@ -36,6 +41,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             self.posts = []
+            self.unhiddenposts = []
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
                 
@@ -45,7 +51,12 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
                     if let postdic = snap.value as? Dictionary <String, AnyObject>{
                         let key = snap.key
                         let post = Post(postKey: key, dictionary: postdic)
+                        
                         self.posts.append(post)
+                        
+                        if post.username == self.uid {
+                            self.unhiddenposts.append(post)
+                        }
                         
                     }
                 }
@@ -61,28 +72,41 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let post = posts[indexPath.row]
+        
+        let post = unhiddenposts[indexPath.row]
+
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier("favorCell") as? FavorCell {
             
             //if let data = NSData(contentsofURL: url){
                 //let img= UIImage(data: data)
         //}
-            
+             cell.accessoryType = .DetailDisclosureButton
         
               cell.configureCell(post)
-              cell.hidePost(post)
+//              cell.hidePost(post)
               return cell
         } else {
             return FavorCell()
         }
     }
     
+     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath){
+        
+                let currentCell = tableView.cellForRowAtIndexPath(indexPath) as! FavorCell
+        
+                
+        
+        
+    }
+
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return unhiddenposts.count
     }
 
   }

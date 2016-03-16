@@ -29,20 +29,20 @@ class FavorCell: UITableViewCell {
     //change this to favor if this is running
 
     
-    func hidePost(post: Post){
-        
-        self.post = post
-        
-        if post.username != uid {
-            mainImg.hidden = true
-            mainLbl.hidden = true
-            favorDesc.hidden = true
-            self.hidden = true
-            //
-        
-          }
-        
-    }
+//    func hidePost(post: Post){
+//        
+//        self.post = post
+//        
+//        if post.username != uid {
+//            mainImg.hidden = true
+//            mainLbl.hidden = true
+//            favorDesc.hidden = true
+//            self.hidden = true
+//            //
+//        
+//          }
+//        
+//    }
     
     
 

@@ -83,11 +83,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             cell.accessoryType = .DetailDisclosureButton
     
 
-//            
-//           cell.updateBtn.tag = indexPath.row
-//           cell.updateBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
-//            cell.bidBtn.tag = indexPath.row
-//            cell.bidBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
        
             cell.configureCell(post,img:img)
             cell.showBtns(post)
