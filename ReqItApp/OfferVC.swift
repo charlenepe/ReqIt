@@ -72,7 +72,7 @@ class OfferVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             
             
             if let url = post.imgURL {
-                img = FeedVC.imageCache.objectForKey(url) as? UIImage
+                img = PostVC.imageCache.objectForKey(url) as? UIImage
             }
             //
 //            cell.accessoryType = .DetailDisclosureButton

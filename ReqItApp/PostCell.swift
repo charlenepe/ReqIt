@@ -12,102 +12,54 @@ import Firebase
 
 class PostCell: UITableViewCell {
     
+    
+    @IBOutlet weak var imgProfile: MaterialImageView!
 
-    @IBOutlet weak var profileImg: UIImageView!
-    @IBOutlet weak var descriptionText: UITextView!
-    @IBOutlet weak var postsLbl: UILabel!
+    @IBOutlet weak var txtDescription: UITextView!
     
-    @IBOutlet weak var unbidBtn: MaterialButton!
-    @IBOutlet weak var deleteBtn: UIButton!
-    @IBOutlet weak var bidBtn: MaterialButton!
-
-    @IBOutlet weak var updateBtn: UIButton!
+    @IBOutlet weak var lblOffer: UILabel!
+    @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
     
-//    @IBOutlet weak var approveBtn: UIButton!
+    @IBOutlet weak var btnUnBid: MaterialButton!
+    @IBOutlet weak var btnBid: MaterialButton!
     
-    @IBOutlet weak var userLbl: UILabel!
-    @IBOutlet weak var favorTitle: UILabel!
+    @IBOutlet weak var btnDelete: MaterialButton!
+    @IBOutlet weak var btnUpdate: MaterialButton!
     
-    var post: Post!
     var request: Request?
-    let uid = reff.authData.uid
 
-
-
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.updateBtn.enabled = false
-        self.bidBtn.enabled = false
+        
+        //imgProfile.clipsToBounds = true
     }
     
-//    override func drawRect(rect: CGRect) {
-//        profileImg.layer.cornerRadius = profileImg.frame.size.width/2
-//    }
-
-    func configureCell(post: Post, img: UIImage?){
-        self.post = post
-        self.descriptionText.text = post.postDescription
-        self.postsLbl.text = "\(post.bids) offers"
-        self.favorTitle.text = post.title
-        self.userLbl.text = post.username
-//        self.profileImg.image = 
-
+    func configureCell(post: Post, img: UIImage?){        
+        txtDescription.text = post.description
+        lblOffer.text = "\(post.bids) Offers"
+        lblTitle.text = post.title
+        lblUserName.text = post.username
+        //        imgProfile.image =
         
-        
-        
-        
-              }
-    
-    func showBtns(post: Post){
-        
-       
-        self.post! = post
-
-        if post.username == uid {
-            updateBtn.hidden = false
-            deleteBtn.hidden = false
-//            approveBtn.hidden = false
-            bidBtn.hidden = true
-            unbidBtn.hidden = true
+        if post.username == DataService.ds.uid {
+            btnBid.hidden = true
+            btnUnBid.hidden = true
+            
+            btnUpdate.hidden = false
+            btnDelete.hidden = false
         } else {
-            updateBtn.hidden = true
-            deleteBtn.hidden = true
-            bidBtn.hidden = false
-            unbidBtn.hidden = false
-//            approveBtn.hidden = true
+            btnBid.hidden = false
+            btnUnBid.hidden = false
+            
+            btnUpdate.hidden = true
+            btnDelete.hidden = true
         }
-    
-    
     }
     
-    @IBAction func deleteAction(sender: UIButton){
-        
-        deletethis(post)
-        
-    }
-    
-    func deletethis(post: Post){
-        let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(post.postKey)")
-        let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(post.postKey)")
-        
-        path.removeValue()
-        path2.removeValue()
-    }
-    
-    @IBAction func updateAction(sender: UIButton){
-        clicked(sender)
-    }
-    
-  
-    func clicked(sender: UIButton)-> Bool{
-        return true
-        
-    }
+}
 
-    
-    }
 
-    
 
 

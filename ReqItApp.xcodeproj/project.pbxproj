@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD4A5E41C9B40D100885D01 /* MaterialImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD4A5E31C9B40D100885D01 /* MaterialImageView.swift */; };
+		0AD4A5E71C9B986A00885D01 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD4A5E61C9B986A00885D01 /* Utils.swift */; };
 		20132D46E877F9F1BDC87010 /* Pods_ReqItApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7886713385DDD47D97F83F /* Pods_ReqItApp.framework */; };
-		C522EFDD1C88C99400FCC771 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFDC1C88C99400FCC771 /* FeedVC.swift */; };
+		C522EFDD1C88C99400FCC771 /* PostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFDC1C88C99400FCC771 /* PostVC.swift */; };
 		C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFDE1C88CADB00FCC771 /* PostCell.swift */; };
 		C522EFE11C88DCC600FCC771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C522EFE01C88DCC600FCC771 /* Main.storyboard */; };
 		C522EFE41C893F5F00FCC771 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522EFE31C893F5E00FCC771 /* Post.swift */; };
-		C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0081C8A0BF100FCC771 /* AddingVC.swift */; };
-		C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D41C8D404700FCC771 /* UpdateVC.swift */; };
-		C522F0D71C8E368900FCC771 /* BidVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D61C8E368800FCC771 /* BidVC.swift */; };
+		C522F0091C8A0BF100FCC771 /* PostAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0081C8A0BF100FCC771 /* PostAddVC.swift */; };
+		C522F0D51C8D404700FCC771 /* PostUpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D41C8D404700FCC771 /* PostUpdateVC.swift */; };
+		C522F0D71C8E368900FCC771 /* OfferAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0D61C8E368800FCC771 /* OfferAddVC.swift */; };
 		C522F0DF1C8F822700FCC771 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C522F0DE1C8F822700FCC771 /* Offer.swift */; };
 		C55F8A761C96629C0095BEE3 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A751C96629C0095BEE3 /* OfferVC.swift */; };
-		C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A771C96788E0095BEE3 /* FavorCell.swift */; };
-		C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */; };
-		C55F8A881C99EFE50095BEE3 /* AcceptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */; };
-		C55F8A8A1C9AA06E0095BEE3 /* AcceptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */; };
+		C55F8A781C96788E0095BEE3 /* FavouriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A771C96788E0095BEE3 /* FavouriteCell.swift */; };
+		C55F8A7C1C9688FD0095BEE3 /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A7B1C9688FD0095BEE3 /* FavouriteVC.swift */; };
+		C55F8A881C99EFE50095BEE3 /* OfferAcceptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A871C99EFE50095BEE3 /* OfferAcceptVC.swift */; };
+		C55F8A8A1C9AA06E0095BEE3 /* OfferAcceptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A891C9AA06E0095BEE3 /* OfferAcceptCell.swift */; };
 		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
-		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
+		C59E848B1C87883D000B3C90 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* LoginVC.swift */; };
 		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
 		C59E84931C87883D000B3C90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C59E84921C87883D000B3C90 /* Assets.xcassets */; };
 		C59E84961C87883D000B3C90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */; };
@@ -41,25 +43,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0AD4A5E31C9B40D100885D01 /* MaterialImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialImageView.swift; sourceTree = "<group>"; };
+		0AD4A5E61C9B986A00885D01 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		303C3F7F7C867087A192A053 /* Pods-ReqItApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReqItApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReqItApp/Pods-ReqItApp.debug.xcconfig"; sourceTree = "<group>"; };
 		3A7886713385DDD47D97F83F /* Pods_ReqItApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReqItApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D43E713E7EAD6C2894A7BDC /* Pods-ReqItApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReqItApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReqItApp/Pods-ReqItApp.release.xcconfig"; sourceTree = "<group>"; };
-		C522EFDC1C88C99400FCC771 /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		C522EFDC1C88C99400FCC771 /* PostVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostVC.swift; sourceTree = "<group>"; };
 		C522EFDE1C88CADB00FCC771 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		C522EFE01C88DCC600FCC771 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C522EFE31C893F5E00FCC771 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		C522F0081C8A0BF100FCC771 /* AddingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingVC.swift; sourceTree = "<group>"; };
-		C522F0D41C8D404700FCC771 /* UpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
-		C522F0D61C8E368800FCC771 /* BidVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidVC.swift; sourceTree = "<group>"; };
+		C522F0081C8A0BF100FCC771 /* PostAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostAddVC.swift; sourceTree = "<group>"; };
+		C522F0D41C8D404700FCC771 /* PostUpdateVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostUpdateVC.swift; sourceTree = "<group>"; };
+		C522F0D61C8E368800FCC771 /* OfferAddVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferAddVC.swift; sourceTree = "<group>"; };
 		C522F0DE1C8F822700FCC771 /* Offer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
 		C55F8A751C96629C0095BEE3 /* OfferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
-		C55F8A771C96788E0095BEE3 /* FavorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorCell.swift; sourceTree = "<group>"; };
-		C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorVC.swift; sourceTree = "<group>"; };
-		C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptVC.swift; sourceTree = "<group>"; };
-		C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptCell.swift; sourceTree = "<group>"; };
+		C55F8A771C96788E0095BEE3 /* FavouriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteCell.swift; sourceTree = "<group>"; };
+		C55F8A7B1C9688FD0095BEE3 /* FavouriteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		C55F8A871C99EFE50095BEE3 /* OfferAcceptVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferAcceptVC.swift; sourceTree = "<group>"; };
+		C55F8A891C9AA06E0095BEE3 /* OfferAcceptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferAcceptCell.swift; sourceTree = "<group>"; };
 		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C59E848A1C87883D000B3C90 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C59E84901C87883D000B3C90 /* ReqItApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReqItApp.xcdatamodel; sourceTree = "<group>"; };
 		C59E84921C87883D000B3C90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C59E84951C87883D000B3C90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -102,6 +106,36 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		0AC5558C1C9C7DDD004B8ECD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C522EFDE1C88CADB00FCC771 /* PostCell.swift */,
+				C55F8A771C96788E0095BEE3 /* FavouriteCell.swift */,
+				C55F8A891C9AA06E0095BEE3 /* OfferAcceptCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		0AD4A5E21C9B409800885D01 /* MaterialTheme */ = {
+			isa = PBXGroup;
+			children = (
+				C59E84B01C878921000B3C90 /* MaterialButton.swift */,
+				C59E84B11C878921000B3C90 /* MaterialTextField.swift */,
+				C59E84B21C878921000B3C90 /* MaterialView.swift */,
+				0AD4A5E31C9B40D100885D01 /* MaterialImageView.swift */,
+			);
+			name = MaterialTheme;
+			sourceTree = "<group>";
+		};
+		0AD4A5E51C9B985A00885D01 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0AD4A5E61C9B986A00885D01 /* Utils.swift */,
+				C59E84AD1C87890D000B3C90 /* Constants.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		34EB4B4622419429CB0369D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,14 +147,14 @@
 		C522EFDB1C88C94100FCC771 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C59E848A1C87883D000B3C90 /* ViewController.swift */,
-				C522EFDC1C88C99400FCC771 /* FeedVC.swift */,
-				C522F0081C8A0BF100FCC771 /* AddingVC.swift */,
-				C522F0D41C8D404700FCC771 /* UpdateVC.swift */,
-				C522F0D61C8E368800FCC771 /* BidVC.swift */,
+				C59E848A1C87883D000B3C90 /* LoginVC.swift */,
+				C522EFDC1C88C99400FCC771 /* PostVC.swift */,
+				C522F0081C8A0BF100FCC771 /* PostAddVC.swift */,
+				C522F0D41C8D404700FCC771 /* PostUpdateVC.swift */,
 				C55F8A751C96629C0095BEE3 /* OfferVC.swift */,
-				C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */,
-				C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */,
+				C522F0D61C8E368800FCC771 /* OfferAddVC.swift */,
+				C55F8A871C99EFE50095BEE3 /* OfferAcceptVC.swift */,
+				C55F8A7B1C9688FD0095BEE3 /* FavouriteVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -155,17 +189,17 @@
 		C59E84871C87883D000B3C90 /* ReqItApp */ = {
 			isa = PBXGroup;
 			children = (
-				C522EFE21C893F4300FCC771 /* Model */,
-				C522EFDB1C88C94100FCC771 /* Controller */,
-				C59E84BD1C87BD35000B3C90 /* Services */,
 				C59E84B61C878C2A000B3C90 /* Frameworks */,
-				C59E84AF1C878915000B3C90 /* View */,
-				C59E84AD1C87890D000B3C90 /* Constants.swift */,
-				C522EFE01C88DCC600FCC771 /* Main.storyboard */,
 				C59E84A41C8788DF000B3C90 /* Resources */,
+				0AD4A5E21C9B409800885D01 /* MaterialTheme */,
+				0AD4A5E51C9B985A00885D01 /* Utils */,
+				C59E84BD1C87BD35000B3C90 /* Services */,
+				C522EFE21C893F4300FCC771 /* Model */,
+				C59E84AF1C878915000B3C90 /* View */,
+				C522EFDB1C88C94100FCC771 /* Controller */,
+				0AC5558C1C9C7DDD004B8ECD /* Cell */,
 				C59E84881C87883D000B3C90 /* AppDelegate.swift */,
 				C59E84921C87883D000B3C90 /* Assets.xcassets */,
-				C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */,
 				C59E84971C87883D000B3C90 /* Info.plist */,
 				C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */,
 			);
@@ -186,12 +220,8 @@
 		C59E84AF1C878915000B3C90 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C59E84B01C878921000B3C90 /* MaterialButton.swift */,
-				C59E84B11C878921000B3C90 /* MaterialTextField.swift */,
-				C59E84B21C878921000B3C90 /* MaterialView.swift */,
-				C522EFDE1C88CADB00FCC771 /* PostCell.swift */,
-				C55F8A771C96788E0095BEE3 /* FavorCell.swift */,
-				C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */,
+				C522EFE01C88DCC600FCC771 /* Main.storyboard */,
+				C59E84941C87883D000B3C90 /* LaunchScreen.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -340,24 +370,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C522EFDD1C88C99400FCC771 /* FeedVC.swift in Sources */,
+				C522EFDD1C88C99400FCC771 /* PostVC.swift in Sources */,
 				C522EFE41C893F5F00FCC771 /* Post.swift in Sources */,
 				C522F0DF1C8F822700FCC771 /* Offer.swift in Sources */,
 				C59E84B41C878921000B3C90 /* MaterialTextField.swift in Sources */,
-				C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */,
-				C522F0D51C8D404700FCC771 /* UpdateVC.swift in Sources */,
+				C59E848B1C87883D000B3C90 /* LoginVC.swift in Sources */,
+				C522F0D51C8D404700FCC771 /* PostUpdateVC.swift in Sources */,
 				C55F8A761C96629C0095BEE3 /* OfferVC.swift in Sources */,
+				0AD4A5E71C9B986A00885D01 /* Utils.swift in Sources */,
 				C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */,
-				C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */,
-				C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */,
+				C55F8A7C1C9688FD0095BEE3 /* FavouriteVC.swift in Sources */,
+				C522F0091C8A0BF100FCC771 /* PostAddVC.swift in Sources */,
 				C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */,
-				C55F8A8A1C9AA06E0095BEE3 /* AcceptCell.swift in Sources */,
+				C55F8A8A1C9AA06E0095BEE3 /* OfferAcceptCell.swift in Sources */,
 				C59E84AE1C87890D000B3C90 /* Constants.swift in Sources */,
 				C59E84B51C878921000B3C90 /* MaterialView.swift in Sources */,
-				C522F0D71C8E368900FCC771 /* BidVC.swift in Sources */,
+				C522F0D71C8E368900FCC771 /* OfferAddVC.swift in Sources */,
 				C59E84B31C878921000B3C90 /* MaterialButton.swift in Sources */,
-				C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */,
-				C55F8A881C99EFE50095BEE3 /* AcceptVC.swift in Sources */,
+				C55F8A781C96788E0095BEE3 /* FavouriteCell.swift in Sources */,
+				0AD4A5E41C9B40D100885D01 /* MaterialImageView.swift in Sources */,
+				C55F8A881C99EFE50095BEE3 /* OfferAcceptVC.swift in Sources */,
 				C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */,
 				C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */,
 			);

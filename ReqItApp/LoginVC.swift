@@ -12,38 +12,31 @@ import FBSDKLoginKit
 
 
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class LoginVC: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-
+    @IBOutlet weak var txtEmail: UITextField!
+    @IBOutlet weak var txtPassword: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.emailField.delegate = self
-        self.passwordField.delegate = self
-        // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if NSUserDefaults.standardUserDefaults().valueForKey(KEY_UID) != nil {
+        if !DataService.ds.uid.isEmpty {
             self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
         }
+        
     }
     
     
     @IBAction func fbBtnPressed(sender: UIButton){
         let facebookLogin = FBSDKLoginManager()
-    
-        facebookLogin.logInWithReadPermissions(["email"], fromViewController: nil) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError:NSError!) -> Void in
         
+        facebookLogin.logInWithReadPermissions(["email"], fromViewController: nil) { (facebookResult: FBSDKLoginManagerLoginResult!, facebookError:NSError!) -> Void in
+            
             
             if facebookError != nil {
                 print("Facebook login failed. Error \(facebookLogin)")
@@ -55,16 +48,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: {error, authData in
                     
                     if error != nil {
-                       print("Login failed. \(error)")
+                        print("Login failed. \(error)")
                     } else {
                         print("Logged in! \(authData)")
                         //create a Firebase user
-
+                        
                         let user = ["provider": authData.provider!, "posts" : ""]
                         DataService.ds.createFirebaseUser(authData.uid, user: user)
-
-
-                        NSUserDefaults.standardUserDefaults().setValue(authData.uid, forKey: KEY_UID)
+                        DataService.ds.uid = authData.uid
                         self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                     }
                     
@@ -72,10 +63,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 
             }
         }
-}
+    }
     
     @IBAction func attemptLogin(sender: UIButton!){
-        if let email = emailField.text where email != "", let pwd = passwordField.text where pwd != "" {
+        if let email = txtEmail.text where email != "", let pwd = txtPassword.text where pwd != "" {
             
             DataService.ds.REF_BASE.authUser(email, password: pwd, withCompletionBlock: { error, authData in
                 
@@ -84,13 +75,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     
                     if error.code == STATUS_ACCOUNT_NONEXIST {
                         DataService.ds.REF_BASE.createUser(email, password: pwd, withValueCompletionBlock: { error, result  in
-                    
+                            
                             if error != nil {
                                 self.showErrorAlert("Could not create account", msg: "Problem creating account")
                             } else {
-                                NSUserDefaults.standardUserDefaults().setValue(result[KEY_UID], forKey: KEY_UID)
                                 
-    
+                                    DataService.ds.uid = result[KEY_UID] as! String
+                                
                                 DataService.ds.REF_BASE.authUser(email, password:
                                     pwd, withCompletionBlock: {
                                         err, authData in
@@ -108,6 +99,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     }
                     
                 } else {
+                    DataService.ds.uid = authData.uid
                     self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                 }
                 
@@ -127,7 +119,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-       textField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
     
