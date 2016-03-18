@@ -7,7 +7,8 @@ import Firebase
 let SHADOW_COLOR:CGFloat = 157.0 / 255.0
 
 //Firebase URLS
-let URL_BASE = "https://testbid.firebaseio.com"
+//let URL_BASE = "https://testbid.firebaseio.com"
+let URL_BASE = "https://reqit.firebaseio.com"
 let URL_POSTS = "\(URL_BASE)/posts"
 let URL_USERS = "\(URL_BASE)/users"
 let URL_OFFERS = "\(URL_BASE)/offers"
