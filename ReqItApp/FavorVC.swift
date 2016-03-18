@@ -17,6 +17,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var postTitle: String!
     
     
+    @IBOutlet weak var feed: UITabBarItem!
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
@@ -95,10 +96,24 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
                 let currentCell = tableView.cellForRowAtIndexPath(indexPath) as! FavorCell
         
-                
+        
+        postKey = currentCell.postKey.text
+        performSegueWithIdentifier("seguetoAccept", sender: self)
         
         
     }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+
+        let viewControllerAccept = segue.destinationViewController as! AcceptVC
+        viewControllerAccept.postKey = postKey
+        
+   //passing the postKey to AcceptVC's postKey :P
+        
+    }
+    
+    
 
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

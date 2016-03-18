@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 let URL_BASE = "https://reqit.firebaseio.com"
-//let uid = reff.authData.uid
+let uid = reff.authData.uid
 
 class DataService {
     static let ds = DataService()
@@ -19,6 +19,7 @@ class DataService {
     private var _REF_BASE = Firebase(url: "\(URL_BASE)")
     private var _REF_POSTS = Firebase(url: "\(URL_BASE)/posts")
     private var _REF_USERS = Firebase(url: "\(URL_BASE)/users")
+
 //    private var _REF_OFFERS = Firebase(url: "\(URL_BASE)/posts/*/offers")
     
 //
@@ -30,6 +31,8 @@ class DataService {
         return _REF_BASE
         
     }
+    
+
 //    
 //    var REF_INDIVPOSTS: Firebase {
 //        return _REF_INDIVPOSTS

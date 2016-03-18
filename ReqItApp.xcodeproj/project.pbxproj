@@ -19,6 +19,8 @@
 		C55F8A761C96629C0095BEE3 /* OfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A751C96629C0095BEE3 /* OfferVC.swift */; };
 		C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A771C96788E0095BEE3 /* FavorCell.swift */; };
 		C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */; };
+		C55F8A881C99EFE50095BEE3 /* AcceptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */; };
+		C55F8A8A1C9AA06E0095BEE3 /* AcceptCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */; };
 		C59E84891C87883D000B3C90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E84881C87883D000B3C90 /* AppDelegate.swift */; };
 		C59E848B1C87883D000B3C90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59E848A1C87883D000B3C90 /* ViewController.swift */; };
 		C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C59E848F1C87883D000B3C90 /* ReqItApp.xcdatamodeld */; };
@@ -53,6 +55,8 @@
 		C55F8A751C96629C0095BEE3 /* OfferVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferVC.swift; sourceTree = "<group>"; };
 		C55F8A771C96788E0095BEE3 /* FavorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorCell.swift; sourceTree = "<group>"; };
 		C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavorVC.swift; sourceTree = "<group>"; };
+		C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptVC.swift; sourceTree = "<group>"; };
+		C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptCell.swift; sourceTree = "<group>"; };
 		C59E84851C87883D000B3C90 /* ReqItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReqItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C59E84881C87883D000B3C90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C59E848A1C87883D000B3C90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +120,7 @@
 				C522F0D61C8E368800FCC771 /* BidVC.swift */,
 				C55F8A751C96629C0095BEE3 /* OfferVC.swift */,
 				C55F8A7B1C9688FD0095BEE3 /* FavorVC.swift */,
+				C55F8A871C99EFE50095BEE3 /* AcceptVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 				C59E84B21C878921000B3C90 /* MaterialView.swift */,
 				C522EFDE1C88CADB00FCC771 /* PostCell.swift */,
 				C55F8A771C96788E0095BEE3 /* FavorCell.swift */,
+				C55F8A891C9AA06E0095BEE3 /* AcceptCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -345,11 +351,13 @@
 				C55F8A7C1C9688FD0095BEE3 /* FavorVC.swift in Sources */,
 				C522F0091C8A0BF100FCC771 /* AddingVC.swift in Sources */,
 				C59E84911C87883D000B3C90 /* ReqItApp.xcdatamodeld in Sources */,
+				C55F8A8A1C9AA06E0095BEE3 /* AcceptCell.swift in Sources */,
 				C59E84AE1C87890D000B3C90 /* Constants.swift in Sources */,
 				C59E84B51C878921000B3C90 /* MaterialView.swift in Sources */,
 				C522F0D71C8E368900FCC771 /* BidVC.swift in Sources */,
 				C59E84B31C878921000B3C90 /* MaterialButton.swift in Sources */,
 				C55F8A781C96788E0095BEE3 /* FavorCell.swift in Sources */,
+				C55F8A881C99EFE50095BEE3 /* AcceptVC.swift in Sources */,
 				C59E84BF1C87BD70000B3C90 /* DataService.swift in Sources */,
 				C522EFDF1C88CADB00FCC771 /* PostCell.swift in Sources */,
 			);

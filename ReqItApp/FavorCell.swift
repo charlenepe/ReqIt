@@ -11,6 +11,8 @@ import Firebase
 
 class FavorCell: UITableViewCell {
     
+    
+    @IBOutlet weak var postKey: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var mainLbl: UILabel!
     @IBOutlet weak var favorDesc: UITextView!
@@ -50,6 +52,7 @@ class FavorCell: UITableViewCell {
     func configureCell(post: Post){
         mainLbl.text = post.title
         favorDesc.text = post.postDescription
+        postKey.text = post.postKey
         
     }
 
