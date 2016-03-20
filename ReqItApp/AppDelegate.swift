@@ -20,6 +20,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     override init() {
         super.init()
         Firebase.defaultConfig().persistenceEnabled = true
+        
+    }
+    
+    func doSomething() {
+        
+        var ref = Firebase(url:"https://docs-examples.firebaseio.com/web/saving-data/fireblog/posts")
+        // Attach a closure to read the data at our posts reference
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        
+        
+        
     }
 
 

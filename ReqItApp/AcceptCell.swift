@@ -34,7 +34,7 @@ class AcceptCell: UITableViewCell {
     
     func configureCell(favor: Offer){
         usernameLbl.text = favor.username
-        desTxt.text = favor.description
+        desTxt.text = favor.bidDescription
         titleLbl.text = favor.title
     }
 

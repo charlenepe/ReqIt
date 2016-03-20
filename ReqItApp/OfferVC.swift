@@ -17,34 +17,43 @@ class OfferVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    var favor = ["Hello", "World", "!"]
     
     static var imageCache = NSCache()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func
+        
+        viewDidLoad() {
+        print("DUMAAANNNNNNN")
+            
+            super.viewDidLoad()
+        
+        
+        
         tableView.delegate = self
         tableView.dataSource = self
+//        
         
-        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            self.posts = []
+//        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
+//            print(snapshot.value)
+//            self.posts = []
+        
+//        for snap in snapshots {
+//
+//            if let postdic = snap.value as? Dictionary <String, String>{
+//                let key = snap.key
+//                
+//                let post = Post(postKey: key,
+//                    postDescription: postdic["description"],
+//                    uuid: postdic["uuid"], title: postdic["title"])
+//                
+//                self.posts.append(post)
+//            }
+//        }
+
             
-            if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
-                
-                
-                for snap in snapshots {
-                    print("SNAP: \(snap)")
-                    if let postdic = snap.value as? Dictionary <String, AnyObject>{
-                        let key = snap.key
-                        let post = Post(postKey: key, dictionary: postdic)
-                        self.posts.append(post)
-                        
-                    }
-                }
-            }
-            
-            self.tableView.reloadData()
-        })
+//            self.tableView.reloadData()
+//        })
         
         //listen for whatever change is made in the data
     }
@@ -61,19 +70,20 @@ class OfferVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return favor.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        print("dumaan")
+        let post = favor[indexPath.row]
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             var img: UIImage?
             
             
-            if let url = post.imgURL {
-                img = FeedVC.imageCache.objectForKey(url) as? UIImage
-            }
+//            if let url = post.imgURL {
+//                img = FeedVC.imageCache.objectForKey(url) as? UIImage
+//            }
             //
 //            cell.accessoryType = .DetailDisclosureButton
             
@@ -84,7 +94,7 @@ class OfferVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             //            cell.bidBtn.tag = indexPath.row
             //            cell.bidBtn.addTarget(self, action: "buttonselect:", forControlEvents: UIControlEvents.TouchUpInside)
             
-            cell.configureCell(post,img:img)
+//            cell.configureCell(post,img:img)
 //            cell.showBtns(post)
             
             return cell

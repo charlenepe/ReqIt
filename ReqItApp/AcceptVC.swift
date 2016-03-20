@@ -36,7 +36,7 @@ class AcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
         
         
         bidCell.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
+//            print(snapshot.value)
             self.favors = []
        
             
@@ -44,10 +44,12 @@ class AcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource {
                 
                 
                 for snap in snapshots {
-                    print("SNAP: \(snap)")
+//                    print("SNAP: \(snap)")
                     if let postdic = snap.value as? Dictionary <String, AnyObject>{
                         let key = snap.key
-                        let offer = Offer(bidKey: key, dictionary: postdic)
+                        let offer = Offer(bidKey: key,
+                            title: "lololo",
+                            bidDescription: "lalala")
                         
                         self.favors.append(offer)
 

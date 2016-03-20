@@ -29,7 +29,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+//        
         DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
             print(snapshot.value)
             self.posts = []
@@ -38,12 +38,15 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 
                
                 for snap in snapshots {
-                    print("SNAP: \(snap)")
-                    if let postdic = snap.value as? Dictionary <String, AnyObject>{
+//                    print("SNAP: \(snap)")
+                    if let postdic = snap.value as? Dictionary <String, String>{
                         let key = snap.key
-                        let post = Post(postKey: key, dictionary: postdic)
+
+                        let post = Post(postKey: key,
+                            postDescription: postdic["description"],
+                             uuid: postdic["uuid"], title: postdic["title"])
+                            
                         self.posts.append(post)
-                        
                     }
                 }
             }
@@ -75,17 +78,17 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             var img: UIImage?
            
-            
-            if let url = post.imgURL {
-            img = FeedVC.imageCache.objectForKey(url) as? UIImage
-            }
 //            
+//            if let url = post.imgURL {
+//            img = FeedVC.imageCache.objectForKey(url) as? UIImage
+//            }
+////            
             cell.accessoryType = .DetailDisclosureButton
     
 
        
             cell.configureCell(post,img:img)
-            cell.showBtns(post)
+//            cell.showBtns(post)
             
             return cell
         } else {
@@ -110,7 +113,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         if currentCell.updateBtn.hidden == false {
             valuetoPass = currentCell.favorTitle.text
             valuetoPass_desc = currentCell.descriptionText.text
-            postKey = currentCell.post.postKey
+            postKey = currentCell.post.uuid
            
             
             performSegueWithIdentifier("seguetoVC", sender: self)
@@ -118,8 +121,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         if currentCell.bidBtn.hidden == false {
               bidInt = currentCell.post.bids
-              postKey = currentCell.post.postKey
-              passUsername = currentCell.post.username
+              postKey = currentCell.post.uuid
+//              passUsername = currentCell.post.username
             
             performSegueWithIdentifier("seguetoBidVC", sender: self)
         }

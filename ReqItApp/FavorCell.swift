@@ -20,7 +20,7 @@ class FavorCell: UITableViewCell {
     
     //change this to favor next time
     
-    var post: Post!
+    var favor: Offer!
 
     
     override func awakeFromNib() {
@@ -49,10 +49,9 @@ class FavorCell: UITableViewCell {
     
 
     
-    func configureCell(post: Post){
-        mainLbl.text = post.title
-        favorDesc.text = post.postDescription
-        postKey.text = post.postKey
+    func configureCell(favor: Offer){
+        mainLbl.text = favor.title
+        favorDesc.text = favor.bidDescription
         
     }
 

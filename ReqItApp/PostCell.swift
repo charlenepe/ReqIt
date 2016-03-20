@@ -50,8 +50,8 @@ class PostCell: UITableViewCell {
         self.descriptionText.text = post.postDescription
         self.postsLbl.text = "\(post.bids) offers"
         self.favorTitle.text = post.title
-        self.userLbl.text = post.username
-//        self.profileImg.image = 
+//        self.userLbl.text = post.username
+//        self.profileImg.image =
 
         
         
@@ -64,19 +64,19 @@ class PostCell: UITableViewCell {
        
         self.post! = post
 
-        if post.username == uid {
-            updateBtn.hidden = false
-            deleteBtn.hidden = false
-//            approveBtn.hidden = false
-            bidBtn.hidden = true
-            unbidBtn.hidden = true
-        } else {
-            updateBtn.hidden = true
-            deleteBtn.hidden = true
-            bidBtn.hidden = false
-            unbidBtn.hidden = false
-//            approveBtn.hidden = true
-        }
+//        if post.username == uid {
+//            updateBtn.hidden = false
+//            deleteBtn.hidden = false
+////            approveBtn.hidden = false
+//            bidBtn.hidden = true
+//            unbidBtn.hidden = true
+//        } else {
+//            updateBtn.hidden = true
+//            deleteBtn.hidden = true
+//            bidBtn.hidden = false
+//            unbidBtn.hidden = false
+////            approveBtn.hidden = true
+//        }
     
     
     }
@@ -88,8 +88,8 @@ class PostCell: UITableViewCell {
     }
     
     func deletethis(post: Post){
-        let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(post.postKey)")
-        let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(post.postKey)")
+        let path = Firebase(url: "https://reqit.firebaseio.com/posts/\(post.uuid)")
+        let path2 = Firebase(url: "https://reqit.firebaseio.com/users/\(uid)/posts/\(post.uuid)")
         
         path.removeValue()
         path2.removeValue()

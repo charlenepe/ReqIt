@@ -15,6 +15,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     var postKey: String!
     var postTitle: String!
+    var mypost = Firebase(url: "https://reqit.firebase.com/offers")
     
     
     @IBOutlet weak var feed: UITabBarItem!
@@ -23,11 +24,14 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     var posts = [Post]()
     var unhiddenposts = [Post]()
     let uid = reff.authData.uid
+    var favors = [Offer]()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        print("Dumaan")
         
 
 //        
@@ -38,27 +42,28 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
 //            }, withCancelBlock: { error in
 //                print(error.description)
      
+        print("boooooo")
 
-        DataService.ds.REF_POSTS.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
+        mypost.observeEventType(.Value, withBlock: { snapshot in
+//            print(snapshot.value)
             self.posts = []
             self.unhiddenposts = []
+            self.favors = []
+            
+            print("OMG")
             
             if let snapshots = snapshot.children.allObjects as? [FDataSnapshot]{
                 
                 
                 for snap in snapshots {
-                    print("SNAP: \(snap)")
-                    if let postdic = snap.value as? Dictionary <String, AnyObject>{
+//                    print("SNAP: \(snap)")
+                    if let favdic = snap.value as? Dictionary <String, String>{
                         let key = snap.key
-                        let post = Post(postKey: key, dictionary: postdic)
+                        let fav = Offer(bidKey: key, title: favdic["title"], bidDescription: favdic["bidDiscription"])
                         
-                        self.posts.append(post)
                         
-                        if post.username == self.uid {
-                            self.unhiddenposts.append(post)
-                        }
-                        
+                        self.favors.append(fav)
+
                     }
                 }
             }
@@ -74,7 +79,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
-        let post = unhiddenposts[indexPath.row]
+        let favor = favors[indexPath.row]
 
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("favorCell") as? FavorCell {
@@ -83,8 +88,8 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 //let img= UIImage(data: data)
         //}
              cell.accessoryType = .DetailDisclosureButton
-        
-              cell.configureCell(post)
+
+              cell.configureCell(favor)
 //              cell.hidePost(post)
               return cell
         } else {
@@ -121,7 +126,7 @@ class FavorVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return unhiddenposts.count
+        return favors.count
     }
 
   }
