@@ -19,6 +19,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        txtEmail.delegate = self
+        txtPassword.delegate = self
     }
     
     

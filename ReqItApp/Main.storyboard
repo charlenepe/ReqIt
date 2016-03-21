@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -635,7 +635,7 @@
             </objects>
             <point key="canvasLocation" x="1345" y="428"/>
         </scene>
-        <!--My Favourites-->
+        <!--My posts-->
         <scene sceneID="vPf-uR-nzg">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="7w3-CC-7pB" customClass="FavouriteVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -685,7 +685,7 @@
                                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxx-po-Y4J">
                                                                             <rect key="frame" x="0.0" y="0.0" width="520" height="20"/>
                                                                             <subviews>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favor title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-sy-GRL">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpO-sy-GRL">
                                                                                     <rect key="frame" x="0.0" y="0.0" width="440" height="20"/>
                                                                                     <fontDescription key="fontDescription" name="NotoSans-BoldItalic" family="Noto Sans" pointSize="13"/>
                                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -767,7 +767,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="My Favourites" id="JVX-uQ-Dx6"/>
+                    <navigationItem key="navigationItem" title="My posts" id="JVX-uQ-Dx6"/>
                     <connections>
                         <outlet property="tableView" destination="nfg-r0-6od" id="d7X-dh-Ys5"/>
                         <segue destination="C3V-0b-H8d" kind="show" identifier="segueToOfferAccept" id="pet-TI-Qzi"/>
@@ -777,10 +777,10 @@
             </objects>
             <point key="canvasLocation" x="1366" y="1240"/>
         </scene>
-        <!--AcceptVC-->
+        <!--Offer AcceptVC-->
         <scene sceneID="yUE-6E-V0y">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C3V-0b-H8d" customClass="AcceptVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="C3V-0b-H8d" customClass="OfferAcceptVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Ap-ar-BTj"/>
                         <viewControllerLayoutGuide type="bottom" id="wR5-pQ-Q5v"/>
@@ -910,10 +910,12 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <outlet property="imgProfile" destination="eny-eK-gMJ" id="mNw-8u-vlK"/>
-                                            <outlet property="lblTitle" destination="Y0O-qi-DYW" id="dm7-N1-cfw"/>
-                                            <outlet property="lblUserName" destination="MNK-Vf-M5C" id="ab7-66-k7T"/>
-                                            <outlet property="txtDescription" destination="DKn-kF-LiU" id="vhI-kh-elW"/>
+                                            <outlet property="accept" destination="zUM-Z2-qVc" id="Nt6-bG-A9e"/>
+                                            <outlet property="imgProfile" destination="eny-eK-gMJ" id="u3e-t7-fD6"/>
+                                            <outlet property="lblTitle" destination="Y0O-qi-DYW" id="iM5-6D-pjP"/>
+                                            <outlet property="lblUserName" destination="MNK-Vf-M5C" id="4PY-AA-Fr1"/>
+                                            <outlet property="reject" destination="Ne4-ID-ND8" id="DXC-CU-Ju2"/>
+                                            <outlet property="txtDescription" destination="DKn-kF-LiU" id="V6t-3i-uzV"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -931,6 +933,9 @@
                         <barButtonItem id="kEi-YN-Gnq"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="8Lp-Ym-E2c" id="g7k-XT-nn3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cev-jF-f3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

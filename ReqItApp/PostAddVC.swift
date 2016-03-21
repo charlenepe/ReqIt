@@ -17,6 +17,7 @@ class PostAddVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.txtTitle.delegate = self;
     }
     
     @IBAction func addNewPost(sender:UIButton!){
@@ -47,6 +48,12 @@ class PostAddVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
             Utils.showAlertWithoutHandler("Error", msg: "Please recheck fields. Cannot leave favor title and description blank.", view: self)
         }
         
+    }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     

@@ -14,6 +14,8 @@ class FavouriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    var postKey: String!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,7 +71,11 @@ class FavouriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
         
         let post = posts[indexPath.row]
         
+        if post.pending != 0 {
         performSegueWithIdentifier(SEGUE_TO_OFFER_ACCEPT, sender: post)
+        postKey = post.postKey
+//        print("Hello \(postKey)")
+        }
         
     }
     
@@ -81,12 +87,20 @@ class FavouriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
          * here check sender as? Post 
          * pass post to the OfferAcceptVC
         ***/
-                
-        let offerAcceptVC = segue.destinationViewController as! OfferAcceptVC
+
         
-        //viewControllerAccept.postKey = postKey
-        
-        //passing the postKey to AcceptVC's postKey :P
+//         let viewController = OfferAcceptVC.self
+ 
+        if segue.identifier == "segueToOfferAccept" {
+            if let post = sender as? Post {
+                let offerAcceptVC = segue.destinationViewController as! OfferAcceptVC
+                offerAcceptVC.key = post.postKey
+//                print("Success \(offerAcceptVC.key)") works
+            }
+        }
+  
+
+            
         
     }
     

@@ -12,10 +12,15 @@ import Alamofire
 
 class OfferAcceptCell: UITableViewCell {
     
+
+    
     @IBOutlet weak var imgProfile: MaterialImageView!
-    @IBOutlet weak var txtDescription: UITextView!
+    
     @IBOutlet weak var lblUserName: UILabel!
+    @IBOutlet weak var txtDescription: UITextView!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var reject: MaterialButton!
+    @IBOutlet weak var accept: MaterialButton!
     
     var request: Request?
         
@@ -24,10 +29,13 @@ class OfferAcceptCell: UITableViewCell {
         
     }
     
-    func configureCell(post: Offer, img: UIImage?){
-        txtDescription.text = post.description
-        lblTitle.text = post.title
-        lblUserName.text = post.username
+    func configureCell(favor: Offer, img: UIImage?){
+        txtDescription.text = favor.description
+        lblTitle.text = favor.title
+        lblUserName.text = favor.username
+
+        
+        
         //        imgProfile.image =
     }
 
