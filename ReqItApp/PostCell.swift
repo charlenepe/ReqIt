@@ -28,6 +28,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var btnUpdate: MaterialButton!
     
     var request: Request?
+    var singPlural: String!
 
     
     override func awakeFromNib() {
@@ -38,9 +39,12 @@ class PostCell: UITableViewCell {
     
     func configureCell(post: Post, img: UIImage?){        
         txtDescription.text = post.description
-        lblOffer.text = "\(post.bids) Offers"
         lblTitle.text = post.title
         lblUserName.text = post.username
+        
+        singPlural = (post.pending == 1) ? "offer" : "offers"
+        
+        lblOffer.text = "\(post.pending) \(singPlural)"
         //        imgProfile.image =
         
         if post.username == DataService.ds.uid {

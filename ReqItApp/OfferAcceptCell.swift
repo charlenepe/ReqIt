@@ -38,5 +38,14 @@ class OfferAcceptCell: UITableViewCell {
         
         //        imgProfile.image =
     }
+    
+    
+    @IBAction func acceptActn(sender: AnyObject) {
+        
+        
+    }
+    
+    
+    
 
 }
