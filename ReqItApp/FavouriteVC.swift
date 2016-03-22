@@ -41,6 +41,7 @@ class FavouriteVC: UIViewController, UITableViewDataSource, UITableViewDelegate{
                 }
             }
             
+             self.posts.sortInPlace{ $1.createdAt < $0.createdAt}
             self.tableView.reloadData()
         })
     }

@@ -57,7 +57,7 @@ class OfferAcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource
                     }
                 }
             }
-             self.favors.sortInPlace{ $1.createdAt > $0.createdAt}
+             self.favors.sortInPlace{ $1.createdAt < $0.createdAt}
             self.tableView.reloadData()
         })
     }
