@@ -73,6 +73,11 @@ class OfferAcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource
         return favors.count
     }
     
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 166
+    }
+
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
