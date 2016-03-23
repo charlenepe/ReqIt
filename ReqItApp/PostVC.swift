@@ -17,6 +17,10 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [Post]()
+    var favor = Offer!()
+    var post: Post?
+    
+    
     
     static var imageCache = NSCache()
     
@@ -97,6 +101,87 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         }
         
     }
+    
+    
+    //
+    //                {
+    //                snapshot in print(snapshot.value.objectForKey("title").queryEqualToValue("bid1"))
+    //
+    //            })
+    
+    
+    
+    //            var query = ref.orderByChild('title').equalTo('bid1');
+    //            query.on('value', function(snapshot) {
+    //                snapshot.forEach(function(child) {
+    //                    child.ref().remove();
+    //                    });
+    //                });```
+    //
+    
+    //
+    
+    
+    //            DataService.ds.REF_OFFERS.childByAppendingPath(favor.bidKey).removeValue()
+    
+    
+    
+    
+    
+
+    //}
+    
+    
+    
+    @IBAction func unbidBtn(sender: AnyObject) {
+        
+        if let btn = sender as? UIButton {
+    //here delete offers that correspond to the postKey
+            
+                let post = posts[btn.tag]
+                let postData  = post
+          
+            
+            DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
+                
+                if let username = snapshot.value["username"] as? String {
+                    if username == DataService.ds.uid {
+                        DataService.ds.REF_OFFERS.childByAppendingPath(snapshot.key).removeValue()
+                    }
+                    
+
+            postData.updatePending(true)
+                
+
+//            DataService.ds.REF_POSTS.childByAppendingPath(post.postKey).updateChildValues(postData)
+                    
+            
+                    
+
+                    
+               
+
+                    
+                    
+                    
+                    
+                self.tableView.reloadData()
+       
+                
+  
+                    
+                }
+
+                })
+        }
+    
+    }
+
+
+   
+    
+    
+    
     
     @IBAction func btnDeleteClicked(sender: AnyObject) {
         if let btn = sender as? UIButton {
