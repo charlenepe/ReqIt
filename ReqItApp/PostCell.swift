@@ -50,12 +50,29 @@ class PostCell: UITableViewCell {
         if post.username == DataService.ds.uid {
             btnBid.hidden = true
             btnUnBid.hidden = true
-            
+
             btnUpdate.hidden = false
             btnDelete.hidden = false
         } else {
             btnBid.hidden = false
             btnUnBid.hidden = false
+            
+            //else { //this is the default:
+//            self.btnBid.enabled = true
+//            self.btnUnBid.enabled = false
+        
+
+        
+      DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
+        
+                if let username = snapshot.value["username"] as? String {
+                    if username == DataService.ds.uid {
+                       self.btnBid.enabled = false
+                       self.btnUnBid.enabled = true
+                    }
+                }
+      })
+            
             
             btnUpdate.hidden = true
             btnDelete.hidden = true

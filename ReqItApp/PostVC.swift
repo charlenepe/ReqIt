@@ -102,34 +102,7 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    
-    //
-    //                {
-    //                snapshot in print(snapshot.value.objectForKey("title").queryEqualToValue("bid1"))
-    //
-    //            })
-    
-    
-    
-    //            var query = ref.orderByChild('title').equalTo('bid1');
-    //            query.on('value', function(snapshot) {
-    //                snapshot.forEach(function(child) {
-    //                    child.ref().remove();
-    //                    });
-    //                });```
-    //
-    
-    //
-    
-    
-    //            DataService.ds.REF_OFFERS.childByAppendingPath(favor.bidKey).removeValue()
-    
-    
-    
-    
-    
-
-    //}
+ 
     
     
     
@@ -141,34 +114,19 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 let post = posts[btn.tag]
                 let postData  = post
           
-            
-            DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
+DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
                 
+                //this part deletes the stuff you've bid
                 if let username = snapshot.value["username"] as? String {
                     if username == DataService.ds.uid {
                         DataService.ds.REF_OFFERS.childByAppendingPath(snapshot.key).removeValue()
                     }
                     
 
-            postData.updatePending(true)
-                
+             postData.updatePending(false)
+             print(post.pending)
 
-//            DataService.ds.REF_POSTS.childByAppendingPath(post.postKey).updateChildValues(postData)
-                    
-            
-                    
-
-                    
-               
-
-                    
-                    
-                    
-                    
                 self.tableView.reloadData()
-       
-                
-  
                     
                 }
 
