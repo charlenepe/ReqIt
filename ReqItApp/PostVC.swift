@@ -71,6 +71,7 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                 imgCached = PostVC.imageCache.objectForKey(url) as? UIImage
             }
             
+            
             cell.configureCell(post, img:imgCached)
             
             cell.btnDelete.tag = indexPath.row
@@ -120,11 +121,29 @@ DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.
                 if let username = snapshot.value["username"] as? String {
                     if username == DataService.ds.uid {
                         DataService.ds.REF_OFFERS.childByAppendingPath(snapshot.key).removeValue()
+                        postData.updatePending(false)
+                        print(post.pending)
+                        
+//                        if let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
+//                            cell.btnBid.enabled = true
+//                            cell.btnUnBid.enabled = false
+//                            
+//                        }
+                        
                     }
                     
+                    
+ 
+       
+                    
+                    
+        //limit to just 1
+//             PostVC.btnBid.enabled = true
+//             PostVC.btnUnbid.enabled = false
+        
+                    
 
-             postData.updatePending(false)
-             print(post.pending)
+                    
 
                 self.tableView.reloadData()
                     

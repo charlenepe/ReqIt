@@ -33,14 +33,13 @@ class PostCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        //imgProfile.clipsToBounds = true
     }
     
     func configureCell(post: Post, img: UIImage?){        
         txtDescription.text = post.description
         lblTitle.text = post.title
         lblUserName.text = post.username
+//        lblOffer.hidden = true
         
         singPlural = (post.pending == 1) ? "offer" : "offers"
         
@@ -61,25 +60,40 @@ class PostCell: UITableViewCell {
 //            self.btnBid.enabled = true
 //            self.btnUnBid.enabled = false
         
+            if post.pending == 0 {
+                self.btnBid.enabled = true
+                self.btnUnBid.enabled = false
+            }
 
-        
+      //this checks if you have already posted something exists
       DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
         
-                if let username = snapshot.value["username"] as? String {
+                if let username =  snapshot.value["username"] as? String {
                     if username == DataService.ds.uid {
                        self.btnBid.enabled = false
                        self.btnUnBid.enabled = true
                     }
+                } else {
+                    self.btnBid.enabled = true
+                    self.btnUnBid.enabled = false
                 }
+        
+    //if: this is when the username of the offer is uid
+    //else: if there's a user, but the username is not the user's username
+    //what about nil ?---0 offers-- accounted for:
+        
+        
+        
       })
-            
-            
+        
+  
             btnUpdate.hidden = true
             btnDelete.hidden = true
         }
     }
     
 }
+
 
 
 
