@@ -71,8 +71,6 @@ class PostCell: UITableViewCell {
             btnUnBid.hidden = false
             
 self.btnUnBid.enabled = false
-        
-            //if post has o posts
  
                 
                 DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
