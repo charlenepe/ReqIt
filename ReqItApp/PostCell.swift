@@ -35,6 +35,20 @@ class PostCell: UITableViewCell {
         super.awakeFromNib()
     }
     
+    
+    
+    func onVoteButton() {
+        
+        if self.btnUnBid.enabled == true{
+            self.btnBid.enabled = false
+            
+        } else {
+            self.btnBid.enabled = true
+        }
+        
+    }
+    
+    
     func configureCell(post: Post, img: UIImage?){        
         txtDescription.text = post.description
         lblTitle.text = post.title
@@ -56,32 +70,25 @@ class PostCell: UITableViewCell {
             btnBid.hidden = false
             btnUnBid.hidden = false
             
-            //else { //this is the default:
-//            self.btnBid.enabled = true
-//            self.btnUnBid.enabled = false
+self.btnUnBid.enabled = false
         
-            if post.pending == 0 {
-                self.btnBid.enabled = true
-                self.btnUnBid.enabled = false
-            }
-
-      //this checks if you have already posted something exists
-      DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
-        
-                if let username =  snapshot.value["username"] as? String {
-                    if username == DataService.ds.uid {
-                       self.btnBid.enabled = false
-                       self.btnUnBid.enabled = true
+            //if post has o posts
+ 
+                
+                DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
+                    
+                    if let username =  snapshot.value["username"] as? String {
+                        if username == DataService.ds.uid {
+                            self.btnUnBid.enabled = true
+                        
+                        }
+                    } else {
+                        self.btnUnBid.enabled = false
+     
                     }
-                } else {
-                    self.btnBid.enabled = true
-                    self.btnUnBid.enabled = false
-                }
-        
-    //if: this is when the username of the offer is uid
-    //else: if there's a user, but the username is not the user's username
-    //what about nil ?---0 offers-- accounted for:
-        
+
+                self.onVoteButton()
+ 
         
         
       })
@@ -92,7 +99,15 @@ class PostCell: UITableViewCell {
         }
     }
     
+
+
+
+    
+    
+    
 }
+
+
 
 
 

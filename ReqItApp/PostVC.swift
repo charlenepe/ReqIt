@@ -124,23 +124,15 @@ DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.
                         postData.updatePending(false)
                         print(post.pending)
                         
-//                        if let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
-//                            cell.btnBid.enabled = true
-//                            cell.btnUnBid.enabled = false
-//                            
-//                        }
+                        if let cell
+                            = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
+                            
+                            cell.btnUnBid.enabled = false
+       }
+                        
                         
                     }
                     
-                    
- 
-       
-                    
-                    
-        //limit to just 1
-//             PostVC.btnBid.enabled = true
-//             PostVC.btnUnbid.enabled = false
-        
                     
 
                     
