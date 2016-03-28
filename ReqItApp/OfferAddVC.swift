@@ -45,7 +45,9 @@ class OfferAddVC: UIViewController {
             DataService.ds.REF_CURRENT_USER.childByAppendingPath("offers").childByAppendingPath(postData.postKey).setValue(true)
             
             //update the pendingCount 
-            postData.updatePending(true)            
+            postData.updatePending(true)
+   
+        
 
             txtDescription.text = ""
             txtTitle.text = ""

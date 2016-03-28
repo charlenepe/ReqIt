@@ -123,22 +123,7 @@ DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.
                         DataService.ds.REF_OFFERS.childByAppendingPath(snapshot.key).removeValue()
                         postData.updatePending(false)
                         print(post.pending)
-                        
-//                        if let cell
-//                            = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
-//                            
-//                            cell.btnUnBid.enabled = false
-//                                cell.onVoteButton()
-//                         }
-                        
-                    }
-                    
-                if let cell = self.tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
-                        cell.btnBid.enabled = true
-                        cell.btnUnBid.enabled = false
-//                        cell.onVoteButton()
-                }
-                    
+
 
                     
 
@@ -146,10 +131,12 @@ DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.
                     
                 }
 
-                })
+                }
+        })
         }
-    
     }
+    
+    
 
 
    
