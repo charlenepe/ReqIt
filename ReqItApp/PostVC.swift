@@ -46,8 +46,12 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                     }
                 }
             }
-            self.posts.sortInPlace{ $0.createdAt > $1.createdAt}
-            self.tableView.reloadData()
+            
+            if self.posts.count > 0 {
+                self.posts.sortInPlace{ $0.createdAt > $1.createdAt}
+                self.tableView.reloadData()
+            }
+            
         })
     }
     
@@ -103,46 +107,45 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
     }
     
- 
     
-    
-    
-    @IBAction func unbidBtn(sender: AnyObject) {
+    @IBAction func unbidBtn(sender: UIButton) {
         
-        if let btn = sender as? UIButton {
-    //here delete offers that correspond to the postKey
+        //Some time you can cast "sender", directly in parameter coz you know it will always be a button or something
+        
+        let post = posts[sender.tag]
+        
+        /** UnBid Steps
+         1. Load Offer Data and Pass to RemoveBid in PostModal
+         2. Update Bid Count with func post.removeBid(offerData)
+         3. Remove Offer From User Node
+         4. Remove Offer Node itself
+         5. Reload tableview
+         **/
+        
+        let userOfferREF = DataService.ds.REF_CURRENT_USER.childByAppendingPath("offers").childByAppendingPath(post.postKey)
+        
+        userOfferREF.observeSingleEventOfType(.Value, withBlock: { offerSnapshot in
             
-                let post = posts[btn.tag]
-                let postData  = post
-          
-DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(post.postKey).observeEventType(.ChildAdded, withBlock:{ snapshot in
-                
-                //this part deletes the stuff you've bid
-                if let username = snapshot.value["username"] as? String {
-                    if username == DataService.ds.uid {
-                        DataService.ds.REF_OFFERS.childByAppendingPath(snapshot.key).removeValue()
-                        postData.updatePending(false)
-                        print(post.pending)
-
-
+            //Load Offer Data
+            if let offerKey = offerSnapshot.value as? String {
+                DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).observeSingleEventOfType(.Value, withBlock: { offerDataSnapshot in
                     
-
-                self.tableView.reloadData()
-                    
-                }
-
-                }
+                    if let offerDic = offerDataSnapshot.value as? [String: AnyObject] {
+                        let offer = Offer(offerKey: offerKey, dictionary: offerDic)
+                        
+                        //Update Bid Count
+                        post.removeBid(offer)
+                        //Remove User Offer Node
+                        userOfferREF.removeValue()
+                        //Remove Offer Node itself
+                        DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
+                        //reload tableview
+                        self.tableView.reloadData()
+                    }
+                })
+            }
         })
-        }
     }
-    
-    
-
-
-   
-    
-    
-    
     
     @IBAction func btnDeleteClicked(sender: AnyObject) {
         if let btn = sender as? UIButton {

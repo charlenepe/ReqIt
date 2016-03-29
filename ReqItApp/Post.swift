@@ -48,11 +48,11 @@ class Post {
         return _postkey
     }
     
-    var createdAt: Double {
+    var createdAt: Double! {
         return _createdAt
     }
 
-    var updatedAt: Double {
+    var updatedAt: Double! {
         return _updatedAt
     }
     
@@ -115,6 +115,14 @@ class Post {
         _pending = addPending ? _pending + 1 : _pending - 1
         
         DataService.ds.REF_POSTS.childByAppendingPath(_postkey).childByAppendingPath("pending").setValue(_pending)
+    }
+    
+    func removeBid(offer: Offer) {
+        if offer.accepted == true {
+            self.updateBids(false)
+        } else {
+            self.updatePending(false)
+        }
     }
     
     

@@ -37,17 +37,17 @@ class OfferAddVC: UIViewController {
                 "createdAt": NSDate().timeIntervalSince1970
             ]
             
-            DataService.ds.REF_OFFERS.childByAutoId().setValue(offerData)
+            let offerRef = DataService.ds.REF_OFFERS.childByAutoId()
+            offerRef.setValue(offerData)
             
             //also add on users tree for reffrence so we can easly check
             //users/currentuser/offers/postKey/true
             
-            DataService.ds.REF_CURRENT_USER.childByAppendingPath("offers").childByAppendingPath(postData.postKey).setValue(true)
+            DataService.ds.REF_CURRENT_USER.childByAppendingPath("offers").childByAppendingPath(postData.postKey).setValue(offerRef.key)
             
             //update the pendingCount 
             postData.updatePending(true)
    
-        
 
             txtDescription.text = ""
             txtTitle.text = ""
