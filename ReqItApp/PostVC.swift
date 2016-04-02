@@ -114,6 +114,17 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
         
         let post = posts[sender.tag]
         
+        
+//        let alert = UIAlertController(title: "Retract bid", message: "Are you sure you want to retract your offer?", preferredStyle:UIAlertControllerStyle.Alert)
+//        
+//
+//        
+//        let okAction = UIAlertAction(title: "Remove bid", style: UIAlertActionStyle.Default, handler: {
+//            (alert: UIAlertAction!) -> Void in
+
+
+
+        
         /** UnBid Steps
          1. Load Offer Data and Pass to RemoveBid in PostModal
          2. Update Bid Count with func post.removeBid(offerData)
@@ -138,6 +149,8 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
                         //Remove User Offer Node
                         userOfferREF.removeValue()
                         //Remove Offer Node itself
+                        
+                        
                         DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
                         //reload tableview
                         self.tableView.reloadData()
