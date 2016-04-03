@@ -61,6 +61,8 @@ class PostCell: UITableViewCell {
         lblOffer.text = "\(post.pending) \(singPlural)"
         //imgProfile.image =
         
+        
+        
         if post.username == DataService.ds.uid {
             btnBid.hidden = true
             btnUnBid.hidden = true

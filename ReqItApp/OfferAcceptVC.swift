@@ -105,38 +105,75 @@ class OfferAcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource
     
 
     @IBAction func funcAcceptButton(sender: AnyObject) {
-        ///this deletes everything-- the entire post, and the corresponding favors
-        /* Accept Steps:
-        1.Delete the post from the post node
-        2.Delete favors from the favor list
-        3.Delete favors from the user node
+    
         
+        let alert = UIAlertController(title: "Accept offer", message: "Accepting this offer will remove this post from the ReqFeed", preferredStyle:UIAlertControllerStyle.Alert)
         
-        
-        */
-        
-        //you delete the post from the post node
-        
-        DataService.ds.REF_POSTS.childByAppendingPath(key).removeValue()
-        //you delete favors from the favor node of they have a postkey eq to the postkey
-        
-//        
-//        REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(key).
-        
-        DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(key).observeSingleEventOfType(.Value, withBlock: { offerSnapshot in
+        let okAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Default, handler: {
+        (alert: UIAlertAction!) -> Void in
             
-            if let offerKey = offerSnapshot.value as? String {
-                
-                DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
-//                DataService.ds.REF_USERS.queryOrderedByChild()
-//                    
-//                    childByAppendingPath(offerKey).removValue()
-                
-            }
-        })
-          self.tableView.reloadData()
+    
+            
+            
+            
+            let ViewController = self.storyboard!.instantiateViewControllerWithIdentifier("tabVC") as! UITabBarController
         
-        //remove offers from the users involved
+            
+            
+            self.presentViewController(ViewController, animated:true, completion:nil)
+        
+            
+            //you delete the post from the post node
+            
+            DataService.ds.REF_POSTS.childByAppendingPath(self.key).removeValue()
+            //you delete favors from the favor node of they have a postkey eq to the postkey
+            
+            //
+            //        REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(key).
+            
+            DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(self.key).observeSingleEventOfType(.Value, withBlock: { offerSnapshot in
+                
+                if let offerKey = offerSnapshot.value as? String {
+                    
+                    DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
+                    DataService.ds.REF_USERS.childByAppendingPath("offers").childByAppendingPath(offerKey).removeValue()
+//                    
+//                      self.tableView.reloadData()
+                    
+                   
+//      
+//                    let vc :PostVC = storyboard.instantiateViewControllerWithIdentifier("FeedVC") as! PostVC
+//                    
+//                    let navigationController = UINavigationController(rootViewController: )
+//                    
+//                    self.presentViewController(navigationController, animated: true, completion: nil)
+//                    
+//                    
+//                    let ViewController = self.storyboard!.instantiateViewControllerWithIdentifier("FeedVC") as! PostVC
+//                    
+//                    self.presentViewController(ViewController, animated:true, completion:nil)
+                    
+                    //                DataService.ds.REF_USERS.queryOrderedByChild()
+                    //
+                    //                    childByAppendingPath(offerKey).removValue()
+                    
+                }
+            })
+            self.tableView.reloadData()
+            
+            //remove offers from the users involved
+        
+        })
+        
+        alert.addAction(okAction)
+        
+        presentViewController(alert, animated: true, completion: nil)
+
+        
+        
+        
+     
+
         
         
         

@@ -591,7 +591,7 @@
         <!--TabCtrl-->
         <scene sceneID="Cgf-VR-mSn">
             <objects>
-                <tabBarController storyboardIdentifier="tabVC" automaticallyAdjustsScrollViewInsets="NO" id="TdT-x0-6lq" userLabel="TabCtrl" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TdT-x0-6lq" userLabel="TabCtrl" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="3cj-oh-85D">
@@ -924,7 +924,7 @@
         <!--Navigation Controller-->
         <scene sceneID="f1V-2B-LJX">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="esq-bt-ryf" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="navcont" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="esq-bt-ryf" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" tag="11" title="" image="newsfeed_new" selectedImage="newsfeed_new" id="bDR-we-LQP">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
