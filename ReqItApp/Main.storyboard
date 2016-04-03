@@ -84,7 +84,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="gax-0G-XqK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="15"/>
-                                                <state key="normal" title="FACEBOOK LOGIN">
+                                                <state key="normal" title=" LOGIN">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
