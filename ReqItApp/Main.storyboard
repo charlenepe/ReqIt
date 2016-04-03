@@ -36,7 +36,7 @@
         <!--LoginVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" title="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LoginVC" customModule="ReqItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -409,7 +409,21 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="POST" id="JGH-4N-O7A"/>
+                    <navigationItem key="navigationItem" title="POST" id="JGH-4N-O7A">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="X1g-4l-P8m">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="26J-6x-pxY">
+                                <rect key="frame" x="447" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.26649537499999998" green="0.66666666669999997" blue="0.062356876300000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOut:" destination="T1C-Yj-XOe" eventType="touchUpInside" id="I6G-63-BU6"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="qcw-Wf-X4D" id="GLO-kv-Vvn"/>
                     </connections>
@@ -824,7 +838,7 @@
                                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="B4K-9j-eM9">
                                                                     <rect key="frame" x="0.0" y="108" width="580" height="30"/>
                                                                     <subviews>
-                                                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUM-Z2-qVc" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUM-Z2-qVc" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
                                                                             <rect key="frame" x="0.0" y="0.0" width="580" height="30"/>
                                                                             <color key="backgroundColor" red="0.0019993528603061408" green="0.70412660256410264" blue="0.0031021780047120503" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <state key="normal" title="ACCEPT">
@@ -832,9 +846,10 @@
                                                                             </state>
                                                                             <connections>
                                                                                 <action selector="acceptActn:" destination="PjT-UU-amr" eventType="touchUpInside" id="bbk-Xh-Dhh"/>
+                                                                                <action selector="funcAcceptButton:" destination="C3V-0b-H8d" eventType="touchUpInside" id="GS2-6O-6w7"/>
                                                                             </connections>
                                                                         </button>
-                                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-ID-ND8" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
+                                                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ne4-ID-ND8" customClass="MaterialButton" customModule="ReqItApp" customModuleProvider="target">
                                                                             <rect key="frame" x="580" y="0.0" width="0.0" height="30"/>
                                                                             <color key="backgroundColor" red="0.80572916670000005" green="0.0" blue="0.0075430394920000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <state key="normal" title="REJECT">

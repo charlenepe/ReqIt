@@ -183,4 +183,25 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
     }
     
     
+    @IBAction func logOut(sender: AnyObject) {
+        
+        DataService.ds.REF_CURRENT_USER.unauth()
+        
+        // Remove the user's uid from storage.
+        
+        NSUserDefaults.standardUserDefaults().setValue(nil, forKey: "uid")
+        
+     
+        
+        let secondViewController = self.storyboard!.instantiateViewControllerWithIdentifier("LoginVC") as! LoginVC
+        
+        self.presentViewController(secondViewController, animated:true, completion:nil)
+        
+
+//        ref.unauth()
+        
+
+    }
+    
+    
 }

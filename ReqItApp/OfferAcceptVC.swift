@@ -99,7 +99,136 @@ class OfferAcceptVC: UIViewController,UITableViewDelegate, UITableViewDataSource
         }
         
     }
+    
+    
+    
+    
+
+    @IBAction func funcAcceptButton(sender: AnyObject) {
+        ///this deletes everything-- the entire post, and the corresponding favors
+        /* Accept Steps:
+        1.Delete the post from the post node
+        2.Delete favors from the favor list
+        3.Delete favors from the user node
+        
+        
+        
+        */
+        
+        //you delete the post from the post node
+        
+        DataService.ds.REF_POSTS.childByAppendingPath(key).removeValue()
+        //you delete favors from the favor node of they have a postkey eq to the postkey
+        
+//        
+//        REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(key).
+        
+        DataService.ds.REF_OFFERS.queryOrderedByChild("postKey").queryEqualToValue(key).observeSingleEventOfType(.Value, withBlock: { offerSnapshot in
+            
+            if let offerKey = offerSnapshot.value as? String {
+                
+                DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
+//                DataService.ds.REF_USERS.queryOrderedByChild()
+//                    
+//                    childByAppendingPath(offerKey).removValue()
+                
+            }
+        })
+          self.tableView.reloadData()
+        
+        //remove offers from the users involved
+        
+        
+        
+        
+        //        userOfferREF.observeSingleEventOfType(.Value, withBlock: { offerSnapshot in
+        //
+        //            //Load Offer Data
+        //            if let offerKey = offerSnapshot.value as? String {
+        //                DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).observeSingleEventOfType(.Value, withBlock: { offerDataSnapshot in
+        //
+        //                    if let offerDic = offerDataSnapshot.value as? [String: AnyObject] {
+        //                        let offer = Offer(offerKey: offerKey, dictionary: offerDic)
+        //
+        //                        //Update Bid Count
+        //                        post.removeBid(offer)
+        //                        //Remove User Offer Node
+        //                        userOfferREF.removeValue()
+        //                        //Remove Offer Node itself
+        //
+        //
+        //                        DataService.ds.REF_OFFERS.childByAppendingPath(offerKey).removeValue()
+        //                        //reload tableview
+        //
+        
+        
+        
+        
+        
+        
+        //        DataService.ds.REF_OFFERS.observeEventType(.Value, withBlock: { postSnapshot in
+        //            self.posts = []
+        //
+        //            if let postData = postSnapshot.children.allObjects as? [FDataSnapshot]{
+        //
+        //                for post in postData {
+        //                    //print("SNAP: \(post)")
+        //                    if let postdic = post.value as? [String:AnyObject]{
+        //                        let post = Post(postKey: post.key, dictionary: postdic)
+        //                        self.posts.append(post)
+        //                    }
+        //                }
+        //            }
+        
+        
+        
+        
+        //
+        //        if let btn = sender as? UIButton {
+        //
+        //            let post = posts[btn.tag]
+        //
+        //            let alert = UIAlertController(title: "Delete \"\(post.title)\" ", message: "Deleting \"\(post.title)\" will also delete all of its data", preferredStyle:UIAlertControllerStyle.Alert)
+        //
+        //            let okAction = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Default, handler: {
+        //                (alert: UIAlertAction!) -> Void in
+        //
+        //                DataService.ds.REF_POSTS.childByAppendingPath(post.postKey).removeValue()
+        //
+        //                self.tableView.reloadData()
+        //            })
+        //
+        //            alert.addAction(okAction)
+        //
+        //            presentViewController(alert, animated: true, completion: nil)
+        //
+        //        }
+        //    }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+
+    
+    
+    
+    
+    
+    
 }
+
+
+
+
+
 
 
 ///if you reject--- it will just be removed
