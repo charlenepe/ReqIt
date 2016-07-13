@@ -76,6 +76,10 @@ class PostVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
             }
             
             
+            
+            
+            
+            
             cell.configureCell(post, img:imgCached)
             
             cell.btnDelete.tag = indexPath.row

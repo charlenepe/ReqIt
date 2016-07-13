@@ -47,6 +47,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
                 let accessToken = FBSDKAccessToken.currentAccessToken().tokenString
                 print("Successfully logged in with Facebook. \(accessToken)")
                 
+                
+                
                 DataService.ds.REF_BASE.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: {error, authData in
                     
                     if error != nil {

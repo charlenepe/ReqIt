@@ -59,7 +59,10 @@ class PostCell: UITableViewCell {
         singPlural = (post.pending == 1) ? "offer" : "offers"
         
         lblOffer.text = "\(post.pending) \(singPlural)"
-        //imgProfile.image =
+//        imgProfile.image = 
+//        
+        
+        
         
         
         
@@ -69,6 +72,15 @@ class PostCell: UITableViewCell {
             
             btnUpdate.hidden = false
             btnDelete.hidden = false
+            
+          
+  
+            
+            
+            
+            
+            
+            
             
         } else {
             btnBid.hidden = false
